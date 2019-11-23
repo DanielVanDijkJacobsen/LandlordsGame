@@ -6,23 +6,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameCreator.GameCreator">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameCreator.GameCreator">
    <children>
-      <ComboBox fx:id="maxNumberOfRounds" layoutX="84.0" layoutY="269.0" onAction="#updateItems" prefWidth="150.0" promptText="Max number of rounds" />
-      <ComboBox fx:id="boardOfChoice" layoutX="84.0" layoutY="295.0" onAction="#updateItems" prefWidth="150.0" promptText="Board" />
-      <CheckBox fx:id="auctionIfNotBought" layoutX="354.0" layoutY="69.0" mnemonicParsing="false" text="Auction if not bought" />
-      <CheckBox fx:id="fastStart" layoutX="355.0" layoutY="115.0" mnemonicParsing="false" text="Fast start" />
-      <ComboBox fx:id="numberOfPlayers" layoutX="84.0" layoutY="65.0" onMouseClicked="#updateItems" prefWidth="150.0" promptText="Number of players" />
-      <CheckBox fx:id="endOnBankruptcy" layoutX="354.0" layoutY="153.0" mnemonicParsing="false" text="End on bankruptcy" />
-      <CheckBox fx:id="endOnOverwhelmingWealth" layoutX="354.0" layoutY="192.0" mnemonicParsing="false" text="End on overwhelming wealth" />
-      <CheckBox fx:id="differingInheritance" layoutX="354.0" layoutY="233.0" mnemonicParsing="false" text="Differing inheritance" />
-      <Button fx:id="startNewGame" layoutX="354.0" layoutY="331.0" mnemonicParsing="false" text="Start New Game" />
-      <TextField fx:id="namePlayer1" layoutX="85.0" layoutY="91.0" text="Name of Player1" />
-      <TextField fx:id="namePlayer6" layoutX="85.0" layoutY="210.0" text="Name of Player 6" />
-      <TextField fx:id="namePlayer5" layoutX="85.0" layoutY="188.0" text="Name of Player 5" />
-      <TextField fx:id="namePlayer4" layoutX="85.0" layoutY="166.0" text="Name of Player 4" />
-      <TextField fx:id="namePlayer3" layoutX="85.0" layoutY="140.0" text="Name of Player 3" />
-      <TextField fx:id="namePlayer2" layoutX="85.0" layoutY="114.0" text="Name of Player 2" />
-      <CheckBox fx:id="randomizeTurnOrder" layoutX="354.0" layoutY="273.0" mnemonicParsing="false" text="Randomize turn order" />
+      <ComboBox fx:id="maxNumberOfRounds" layoutX="60.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateItems" onMouseClicked="#updateItems" prefHeight="25.0" prefWidth="150.0" promptText="Max number of rounds" />
+      <ComboBox fx:id="boardOfChoice" layoutX="60.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateItems" onMouseClicked="#updateItems" prefHeight="25.0" prefWidth="150.0" promptText="Board" />
+      <CheckBox fx:id="auctionIfNotBought" layoutX="350.0" layoutY="60.0" mnemonicParsing="false" text="Auction if not bought" />
+      <CheckBox fx:id="fastStart" layoutX="350.0" layoutY="80.0" mnemonicParsing="false" text="Fast start" />
+      <ComboBox fx:id="numberOfPlayers" layoutX="60.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#updateItems" prefHeight="25.0" prefWidth="150.0" promptText="Number of players" />
+      <CheckBox fx:id="endOnBankruptcy" layoutX="350.0" layoutY="100.0" mnemonicParsing="false" text="End on bankruptcy" />
+      <CheckBox fx:id="endOnOverwhelmingWealth" layoutX="350.0" layoutY="120.0" mnemonicParsing="false" text="End on overwhelming wealth" />
+      <CheckBox fx:id="differingInheritance" layoutX="350.0" layoutY="140.0" mnemonicParsing="false" text="Differing inheritance" />
+      <Button fx:id="startNewGame" layoutX="350.0" layoutY="310.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#startNewGameAction" prefHeight="25.0" prefWidth="150.0" text="Start New Game" />
+      <TextField fx:id="namePlayer1" layoutX="60.0" layoutY="90.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player1" />
+      <TextField fx:id="namePlayer6" layoutX="60.0" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player 6" />
+      <TextField fx:id="namePlayer5" layoutX="60.0" layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player 5" />
+      <TextField fx:id="namePlayer4" layoutX="60.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player 4" />
+      <TextField fx:id="namePlayer3" layoutX="60.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player 3" />
+      <TextField fx:id="namePlayer2" layoutX="60.0" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" text="Name of Player 2" />
+      <CheckBox fx:id="randomizeTurnOrder" layoutX="350.0" layoutY="160.0" mnemonicParsing="false" text="Randomize turn order" />
    </children>
 </AnchorPane>

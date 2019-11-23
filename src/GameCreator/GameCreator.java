@@ -66,11 +66,9 @@ public class GameCreator {
     }
 
     @FXML
-    private void startNewGameAction(ActionEvent event) {
-        //Don't know if this will create a maxNumberOfRounds value for the creator, needs testing
-        if (maxNumberOfRounds.getValue() == null) {
-            maxNumberOfRounds.placeholderProperty().setValue(0);
-        }
+    private void startNewGameAction(javafx.event.ActionEvent event) {
+        //Don't know if this will create a maxNumberOfRounds value for the creator, needs testing for 3 players as default, can we pick others?
+        numberOfPlayers.getSelectionModel().selectFirst();
         GameMaster theGame = new GameMaster((Integer) maxNumberOfRounds.getValue(), (String) boardOfChoice.getValue(),
                 auctionIfNotBought.isSelected(), fastStart.isSelected(), endOnBankruptcy.isSelected(),
                 endOnOverwhelmingWealth.isSelected(), differingInheritance.isSelected(),
