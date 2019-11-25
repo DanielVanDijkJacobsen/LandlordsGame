@@ -4,12 +4,9 @@
     <list default="true" id="629e9611-77a8-4f6d-809d-653b7743ed20" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameCreator/GameCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCreator/GameCreator.java" afterDir="false" />
-=======
->>>>>>> 11fcfb0db709052fff30255fff58c6aadce3ab9d
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,13 +83,13 @@
       <workItem from="1573891442257" duration="11280000" />
       <workItem from="1574017776053" duration="1256000" />
       <workItem from="1574024205124" duration="5370000" />
-<<<<<<< HEAD
       <workItem from="1574229949138" duration="19603000" />
-=======
       <workItem from="1574229949138" duration="9782000" />
       <workItem from="1574615940574" duration="192000" />
       <workItem from="1574670010847" duration="685000" />
->>>>>>> 11fcfb0db709052fff30255fff58c6aadce3ab9d
+      <workItem from="1574229949138" duration="9782000" />
+      <workItem from="1574615940574" duration="192000" />
+      <workItem from="1574670010847" duration="685000" />
     </task>
     <servers />
   </component>
