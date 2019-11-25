@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629e9611-77a8-4f6d-809d-653b7743ed20" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GameCreator/GameCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameCreator/GameCreator.java" afterDir="false" />
+=======
+>>>>>>> 11fcfb0db709052fff30255fff58c6aadce3ab9d
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +22,6 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -29,13 +34,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/json-simple-1.1.1.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
@@ -83,7 +86,13 @@
       <workItem from="1573891442257" duration="11280000" />
       <workItem from="1574017776053" duration="1256000" />
       <workItem from="1574024205124" duration="5370000" />
-      <workItem from="1574229949138" duration="16259000" />
+<<<<<<< HEAD
+      <workItem from="1574229949138" duration="19603000" />
+=======
+      <workItem from="1574229949138" duration="9782000" />
+      <workItem from="1574615940574" duration="192000" />
+      <workItem from="1574670010847" duration="685000" />
+>>>>>>> 11fcfb0db709052fff30255fff58c6aadce3ab9d
     </task>
     <servers />
   </component>
@@ -95,7 +104,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

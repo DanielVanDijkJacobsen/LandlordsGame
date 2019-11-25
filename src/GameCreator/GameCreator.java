@@ -5,6 +5,7 @@ import Game.GameMaster;
 import Game.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class GameCreator {
@@ -55,33 +55,33 @@ public class GameCreator {
 
     @FXML
     private void updateItems(Event event) {
-        ObservableList playerNumber = FXCollections.observableArrayList("3 players","4 players","5 players",
-                "6 players");
+        ObservableList playerNumber = FXCollections.observableArrayList("3","4","5",
+                "6");
         this.numberOfPlayers.setItems(playerNumber);
-        ObservableList numberOfRounds = FXCollections.observableArrayList("10 rounds","15 rounds","20 rounds",
-                "25 rounds");
+        ObservableList numberOfRounds = FXCollections.observableArrayList("10","15","20",
+                "25");
         this.maxNumberOfRounds.setItems(numberOfRounds);
         ObservableList listOfBoards = FXCollections.observableArrayList("Matador");
         this.boardOfChoice.setItems(listOfBoards);
     }
 
     @FXML
-    private void startNewGameAction(javafx.event.ActionEvent event) {
+    private void startNewGameAction(ActionEvent event) {
         //Don't know if this will create a maxNumberOfRounds value for the creator, needs testing for 3 players as default, can we pick others?
         numberOfPlayers.getSelectionModel().selectFirst();
-        GameMaster theGame = new GameMaster((Integer) maxNumberOfRounds.getValue(), (String) boardOfChoice.getValue(),
+        GameMaster theGame = new GameMaster(Integer.parseInt((String) maxNumberOfRounds.getValue()), (String) boardOfChoice.getValue(),
                 auctionIfNotBought.isSelected(), fastStart.isSelected(), endOnBankruptcy.isSelected(),
                 endOnOverwhelmingWealth.isSelected(), differingInheritance.isSelected(),
                 randomizeTurnOrder.isSelected());
-        Player player1 = new Player((String) namePlayer1.getCharacters()); theGame.players.add(player1);
-        Player player2 = new Player((String) namePlayer2.getCharacters()); theGame.players.add(player2);
-        Player player3 = new Player((String) namePlayer3.getCharacters()); theGame.players.add(player3);
-        if ((Integer) numberOfPlayers.getValue() > 3) {
-            Player player4 = new Player((String) namePlayer4.getCharacters()); theGame.players.add(player4);
-            if ((Integer) numberOfPlayers.getValue() > 4) {
-                Player player5 = new Player((String) namePlayer5.getCharacters()); theGame.players.add(player5);
-                if ((Integer) numberOfPlayers.getValue() > 5) {
-                    Player player6 = new Player((String) namePlayer6.getCharacters()); theGame.players.add(player6);
+        Player player1 = new Player(namePlayer1.getCharacters().toString()); theGame.players.add(player1);
+        Player player2 = new Player(namePlayer2.getCharacters().toString()); theGame.players.add(player2);
+        Player player3 = new Player(namePlayer3.getCharacters().toString()); theGame.players.add(player3);
+        if (Integer.parseInt((String) numberOfPlayers.getValue()) > 3) {
+            Player player4 = new Player(namePlayer4.getCharacters().toString()); theGame.players.add(player4);
+            if (Integer.parseInt((String) numberOfPlayers.getValue()) > 4) {
+                Player player5 = new Player(namePlayer5.getCharacters().toString()); theGame.players.add(player5);
+                if (Integer.parseInt((String) numberOfPlayers.getValue()) > 5) {
+                    Player player6 = new Player(namePlayer6.getCharacters().toString()); theGame.players.add(player6);
                 }
             }
         }
