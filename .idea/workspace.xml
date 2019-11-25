@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629e9611-77a8-4f6d-809d-653b7743ed20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataHandler/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LandlordsGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LandlordsGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataHandler/JSONImporter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,7 @@
       <workItem from="1573891442257" duration="11280000" />
       <workItem from="1574017776053" duration="1256000" />
       <workItem from="1574024205124" duration="5370000" />
-      <workItem from="1574229949138" duration="15522000" />
+      <workItem from="1574229949138" duration="16259000" />
     </task>
     <servers />
   </component>
