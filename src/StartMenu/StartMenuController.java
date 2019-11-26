@@ -12,8 +12,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -54,9 +57,17 @@ public class StartMenuController implements Initializable {
         try {
             Stage loadGameStage = new Stage();
             FXMLLoader loader = new FXMLLoader();
+            FileChooser fileChooser = new FileChooser();
+            Button btn = new Button("Select File");
+            btn.setOnAction(e -> {
+                File selectedFile = fileChooser.showOpenDialog(loadGameStage);
+            });
+            VBox vBox = new VBox(btn);
+            Scene scene = new Scene(vBox, 400, 400);
+            loadGameStage.setScene(scene);
+            loadGameStage.show();
             Pane root = (Pane)loader.load(getClass().getResource("/LoadGameInterface/LoadGameScreen.fxml").openStream());
             LoadGameScreen loadGameScreen = (LoadGameScreen) loader.getController();
-            Scene scene = new Scene(root);
             loadGameStage.setScene(scene);
             loadGameStage.setTitle("Start new game");
             loadGameStage.setResizable(false);
