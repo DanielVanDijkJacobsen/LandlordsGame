@@ -94,7 +94,7 @@
             <Circle fx:id="Player6" layoutX="98.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Pane>
-      <Label fx:id="Players" layoutX="229.0" layoutY="158.0" text="Players">
+      <Label layoutX="229.0" layoutY="158.0" text="Players">
          <font>
             <Font size="14.0" />
          </font>
@@ -102,24 +102,24 @@
       <Pane layoutX="457.0" layoutY="147.0" prefHeight="425.0" prefWidth="329.0">
          <children>
             <Label layoutX="110.0" layoutY="6.0" text="The players statistic" />
-            <Label fx:id="player1" layoutX="22.0" layoutY="51.0" text="Player 1">
+            <Label fx:id="Player1" layoutX="22.0" layoutY="51.0" text="Player 1">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="player3" layoutX="21.0" layoutY="161.0" text="Player 3">
+            <Label fx:id="Player3" layoutX="21.0" layoutY="161.0" text="Player 3">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="player2" layoutX="21.0" layoutY="108.0" text="Player 2">
+            <Label fx:id="Player2" layoutX="21.0" layoutY="108.0" text="Player 2">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="player4" layoutX="20.0" layoutY="212.0" text="Player 4" />
-            <Label fx:id="player5" layoutX="21.0" layoutY="267.0" text="Player 5" />
-            <Label fx:id="player6" layoutX="21.0" layoutY="325.0" text="Player 6" />
+            <Label fx:id="Player4" layoutX="20.0" layoutY="212.0" text="Player 4" />
+            <Label fx:id="Player5" layoutX="21.0" layoutY="267.0" text="Player 5" />
+            <Label fx:id="Player6" layoutX="21.0" layoutY="325.0" text="Player 6" />
             <ListView fx:id="dataPlayer1" layoutX="110.0" layoutY="39.0" prefHeight="47.0" prefWidth="187.0" />
             <ListView fx:id="dataPlayer2" layoutX="110.0" layoutY="93.0" prefHeight="47.0" prefWidth="187.0" />
             <ListView fx:id="dataPlayer3" layoutX="110.0" layoutY="146.0" prefHeight="47.0" prefWidth="187.0" />
@@ -130,10 +130,10 @@
       </Pane>
       <Pane layoutX="151.0" layoutY="387.0" prefHeight="148.0" prefWidth="202.0">
          <children>
-            <Label fx:id="Trade" layoutX="85.0" layoutY="6.0" text="Trade" />
+            <Label layoutX="85.0" layoutY="6.0" text="Trade" />
             <Label layoutX="35.0" layoutY="42.0" text="Would you like to trade?" />
-            <Button fx:id="tradeYes" layoutX="35.0" layoutY="87.0" mnemonicParsing="false" text="Yes" />
-            <Button fx:id="tradeNo" layoutX="131.0" layoutY="87.0" mnemonicParsing="false" text="No" />
+            <Button fx:id="ButtonYes" layoutX="35.0" layoutY="87.0" mnemonicParsing="false" text="Yes" />
+            <Button fx:id="ButtonNo" layoutX="131.0" layoutY="87.0" mnemonicParsing="false" text="No" />
          </children>
       </Pane>
    </children>
