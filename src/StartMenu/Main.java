@@ -1,5 +1,6 @@
 package StartMenu;
 
+import DataHandler.JSONImporter;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,9 @@ public class Main extends Application {
     }
 
     public static void main(String[] args){
+        JSONImporter jsonImporter = new JSONImporter();
+        jsonImporter.createPlotsFromJSON("Matador");
         launch(args);
+
     }
 }

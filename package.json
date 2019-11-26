@@ -1,0 +1,346 @@
+{
+  "plots": {
+  "Matador": [
+    {
+      "ID": "0",
+      "EVENT": "INJAIL"
+    },
+    {
+      "ID": "1",
+      "EVENT": "START"
+    },
+    {
+      "ID": "2",
+      "TITLE": "Rødovrevej",
+      "PRICE": "1200",
+      "RENT": "50",
+      "U1": "250",
+      "U2": "750",
+      "U3": "2250",
+      "U4": "4000",
+      "U5": "6000",
+      "DISTRICT": "LIGHTBLUE"
+    },
+    {
+      "ID": "3",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "4",
+      "TITLE": "Hvidovrevej",
+      "PRICE": "1200",
+      "RENT": "50",
+      "U1": "250",
+      "U2": "750",
+      "U3": "2250",
+      "U4": "4000",
+      "U5": "6000",
+      "DISTRICT": "LIGHTBLUE"
+    },
+    {
+      "ID": "5",
+      "EVENT": "TAX4000/10%"
+    },
+    {
+      "ID": "6",
+      "TRAIN": "Nørreport"
+    },
+    {
+      "ID": "7",
+      "TITLE": "Roskildevej",
+      "PRICE": "2000",
+      "RENT": "100",
+      "U1": "600",
+      "U2": "1800",
+      "U3": "5400",
+      "U4": "8000",
+      "U5": "11000",
+      "DISTRICT": "ORANGE"
+    },
+    {
+      "ID": "8",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "9",
+      "TITLE": "Valby Langgade",
+      "PRICE": "2000",
+      "RENT": "100",
+      "U1": "600",
+      "U2": "1800",
+      "U3": "5400",
+      "U4": "8000",
+      "U5": "11000",
+      "DISTRICT": "ORANGE"
+    },
+    {
+      "ID": "10",
+      "TITLE": "Allégade",
+      "PRICE": "2400",
+      "RENT": "150",
+      "U1": "800",
+      "U2": "2000",
+      "U3": "6000",
+      "U4": "9000",
+      "U5": "12000",
+      "DISTRICT": "ORANGE"
+    },
+    {
+      "ID": "11",
+      "EVENT": "BESØGIFÆNGSEL"
+    },
+    {
+      "ID": "12",
+      "TITLE": "Frederiksberg Allé",
+      "PRICE": "2800",
+      "RENT": "200",
+      "U1": "1000",
+      "U2": "3000",
+      "U3": "9000",
+      "U4": "12500",
+      "U5": "15000",
+      "DISTRICT": "GREEN"
+    },
+    {
+      "ID": "13",
+      "UTILITY": "Amager Bakke"
+    },
+    {
+      "ID": "14",
+      "TITLE": "Bülowsvej",
+      "PRICE": "2800",
+      "RENT": "200",
+      "U1": "1000",
+      "U2": "3000",
+      "U3": "9000",
+      "U4": "12500",
+      "U5": "15000",
+      "DISTRICT": "GREEN"
+    },
+    {
+      "ID": "15",
+      "TITLE": "Gammel Kongevej",
+      "PRICE": "3200",
+      "RENT": "250",
+      "U1": "1250",
+      "U2": "3750",
+      "U3": "10000",
+      "U4": "14000",
+      "U5": "18000",
+      "DISTRICT": "GREEN"
+    },
+    {
+      "ID": "16",
+      "TRAIN": "Vesterport"
+    },
+    {
+      "ID": "17",
+      "TITLE": "Bernstorftsvej",
+      "PRICE": "3600",
+      "RENT": "300",
+      "U1": "1400",
+      "U2": "4000",
+      "U3": "11000",
+      "U4": "15000",
+      "U5": "19000",
+      "DISTRICT": "GREY"
+    },
+    {
+      "ID": "18",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "19",
+      "TITLE": "Hellerupvej",
+      "PRICE": "3600",
+      "RENT": "300",
+      "U1": "1400",
+      "U2": "4000",
+      "U3": "11000",
+      "U4": "15000",
+      "U5": "19000",
+      "DISTRICT": "GREY"
+    },
+    {
+      "ID": "20",
+      "TITLE": "Strandvejen",
+      "PRICE": "4000",
+      "RENT": "350",
+      "U1": "1600",
+      "U2": "4400",
+      "U3": "12000",
+      "U4": "16000",
+      "U5": "20000",
+      "DISTRICT": "GREY"
+    },
+    {
+      "ID": "21",
+      "EVENT": "FRI PARKERING"
+    },
+    {
+      "ID": "22",
+      "TITLE": "Trianglen",
+      "PRICE": "4400",
+      "RENT": "350",
+      "U1": "1800",
+      "U2": "5000",
+      "U3": "14000",
+      "U4": "17500",
+      "U5": "21000",
+      "DISTRICT": "RED"
+    },
+    {
+      "ID": "23",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "24",
+      "TITLE": "Østerbrogade",
+      "PRICE": "4400",
+      "RENT": "350",
+      "U1": "1800",
+      "U2": "5000",
+      "U3": "14000",
+      "U4": "17500",
+      "U5": "21000",
+      "DISTRICT": "RED"
+    },
+    {
+      "ID": "25",
+      "TITLE": "Grønningen",
+      "PRICE": "4800",
+      "RENT": "400",
+      "U1": "2000",
+      "U2": "6000",
+      "U3": "15000",
+      "U4": "18500",
+      "U5": "22000",
+      "DISTRICT": "RED"
+    },
+    {
+      "ID": "26",
+      "TRAIN": "Østerport"
+    },
+    {
+      "ID": "27",
+      "TITLE": "Bredgade",
+      "PRICE": "5200",
+      "RENT": "450",
+      "U1": "2200",
+      "U2": "6600",
+      "U3": "16000",
+      "U4": "19500",
+      "U5": "23000",
+      "DISTRICT": "WHITE"
+    },
+    {
+      "ID": "28",
+      "TITLE": "Kongens Nytorv",
+      "PRICE": "5200",
+      "RENT": "450",
+      "U1": "2200",
+      "U2": "6600",
+      "U3": "16000",
+      "U4": "19500",
+      "U5": "23000",
+      "DISTRICT": "WHITE"
+    },
+    {
+      "ID": "29",
+      "UTILITY": "Bispeengen Genbrugsstation"
+    },
+    {
+      "ID": "30",
+      "TITLE": "Østergade",
+      "PRICE": "5600",
+      "RENT": "500",
+      "U1": "2400",
+      "U2": "7200",
+      "U3": "17000",
+      "U4": "20500",
+      "U5": "24000",
+      "DISTRICT": "WHITE"
+    },
+    {
+      "ID": "31",
+      "EVENT": "GOTOJAIL"
+    },
+    {
+      "ID": "32",
+      "TITLE": "Amagertorv",
+      "PRICE": "6000",
+      "RENT": "550",
+      "U1": "2600",
+      "U2": "7800",
+      "U3": "18000",
+      "U4": "22000",
+      "U5": "25000",
+      "DISTRICT": "YELLOW"
+    },
+    {
+      "ID": "33",
+      "TITLE": "Vimmelskaftet",
+      "PRICE": "6000",
+      "RENT": "550",
+      "U1": "2600",
+      "U2": "7800",
+      "U3": "18000",
+      "U4": "22000",
+      "U5": "25000",
+      "DISTRICT": "YELLOW"
+    },
+    {
+      "ID": "34",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "35",
+      "TITLE": "Nygade",
+      "PRICE": "6400",
+      "RENT": "600",
+      "U1": "3000",
+      "U2": "9000",
+      "U3": "20000",
+      "U4": "24000",
+      "U5": "28000",
+      "DISTRICT": "YELLOW"
+    },
+    {
+      "ID": "36",
+      "TRAIN": "Hovedbanegården"
+    },
+    {
+      "ID": "37",
+      "EVENT": "CHANCE"
+    },
+    {
+      "ID": "38",
+      "TITLE": "Frederiksberggade",
+      "PRICE": "7000",
+      "RENT": "700",
+      "U1": "3500",
+      "U2": "10000",
+      "U3": "22000",
+      "U4": "26000",
+      "U5": "30000",
+      "DISTRICT": "PURPLE"
+    },
+    {
+      "ID": "39",
+      "EVENT": "TAX2000"
+    },
+    {
+      "ID": "40",
+      "TITLE": "Rådhuspladsen",
+      "PRICE": "8000",
+      "RENT": "1000",
+      "U1": "4000",
+      "U2": "12000",
+      "U3": "28000",
+      "U4": "34000",
+      "U5": "40000",
+      "DISTRICT": "PURPLE"
+    }
+  ]
+}
+}
