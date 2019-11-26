@@ -19,7 +19,7 @@ public class Main extends Application {
 
     public static void main(String[] args){
         JSONImporter jsonImporter = new JSONImporter();
-        jsonImporter.createPlotsFromJSON("Matador");
+        jsonImporter.createBoardJSON("Matador");
         launch(args);
 
     }

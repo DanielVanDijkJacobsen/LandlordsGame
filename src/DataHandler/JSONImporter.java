@@ -1,5 +1,6 @@
 package DataHandler;
 
+import Game.Board;
 import Game.Plots.Plot;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -16,26 +17,27 @@ import java.util.Iterator;
 public class JSONImporter {
     JSONParser parser = new JSONParser();
     FileReader reader;
-    public ArrayList<Plot> createPlotsFromJSON(String boardName) {
+
+    public Board createBoardJSON(String boardName) {
         ArrayList <Plot> plotsForBoard = new ArrayList<>();
-        {
-            try {
-                reader = new FileReader("package.json");
-                Object object = parser.parse(reader);
-                JSONObject initialFile = (JSONObject) object;
-                JSONObject boardObject = (JSONObject) initialFile.get("plots");
-                JSONArray arrayOfPlots = (JSONArray) boardObject.get(boardName);
-                for (int i = 0; i < arrayOfPlots.size(); i++) {
-                    JSONObject plotJSONObject = (JSONObject) arrayOfPlots.get(i);
-                    int plotID = Integer.parseInt(plotJSONObject.get("ID").toString());
-                    Plot plot = new Plot(plotID);
-                    plotsForBoard.add(plot);
-                }
-            } catch (ParseException | IOException e) {
-                e.printStackTrace();
+        try {
+            reader = new FileReader("package.json");
+            Object object = parser.parse(reader);
+            JSONObject initialFile = (JSONObject) object;
+            JSONObject boardObject = (JSONObject) initialFile.get("plots");
+            JSONArray arrayOfPlots = (JSONArray) boardObject.get(boardName);
+            for (int i = 0; i < arrayOfPlots.size(); i++) {
+                JSONObject plotJSONObject = (JSONObject) arrayOfPlots.get(i);
+                int plotID = Integer.parseInt(plotJSONObject.get("ID").toString());
+                Plot plot = new Plot(plotID);
+                plotsForBoard.add(plot);
             }
+        } catch (ParseException | IOException e) {
+                e.printStackTrace();
         }
-        return plotsForBoard;
+        Board board = new Board();
+        board.plotsOnBoard.addAll(plotsForBoard);
+        return board;
     }
 
 }

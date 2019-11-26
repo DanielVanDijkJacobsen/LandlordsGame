@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class GameMaster implements Serializable {
     public ArrayList<Player> players;
+    public Board board;
     int roundsLeft;
     String boardType;
     boolean auctionIfNotBought;
