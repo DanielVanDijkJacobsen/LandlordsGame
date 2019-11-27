@@ -86,12 +86,12 @@
       </GridPane>
       <Pane id="Player" layoutX="186.0" layoutY="176.0" prefHeight="174.0" prefWidth="129.0" styleClass="Player">
          <children>
-            <Circle fx:id="Player1" fill="DODGERBLUE" layoutX="29.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player2" fill="#2fdd1c" layoutX="98.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player3" fill="#eb2020" layoutX="29.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player4" fill="#fffc1f" layoutX="98.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player5" fill="#b51fff" layoutX="29.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player6" layoutX="98.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player1" fill="DODGERBLUE" layoutX="29.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player2" fill="#2fdd1c" layoutX="98.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player3" fill="#eb2020" layoutX="29.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player4" fill="#fffc1f" layoutX="98.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player5" fill="#b51fff" layoutX="29.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="player6" layoutX="98.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Pane>
       <Label layoutX="229.0" layoutY="158.0" text="Players">
@@ -102,24 +102,24 @@
       <Pane layoutX="457.0" layoutY="147.0" prefHeight="425.0" prefWidth="329.0">
          <children>
             <Label layoutX="110.0" layoutY="6.0" text="The players statistic" />
-            <Label fx:id="Player1" layoutX="22.0" layoutY="51.0" text="Player 1">
+            <Label fx:id="statPlayer1" layoutX="22.0" layoutY="51.0" text="Player 1">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="Player3" layoutX="21.0" layoutY="161.0" text="Player 3">
+            <Label fx:id="statPlayer3" layoutX="21.0" layoutY="161.0" text="Player 3">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="Player2" layoutX="21.0" layoutY="108.0" text="Player 2">
+            <Label fx:id="statPlayer2" layoutX="21.0" layoutY="108.0" text="Player 2">
                <font>
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="Player4" layoutX="20.0" layoutY="212.0" text="Player 4" />
-            <Label fx:id="Player5" layoutX="21.0" layoutY="267.0" text="Player 5" />
-            <Label fx:id="Player6" layoutX="21.0" layoutY="325.0" text="Player 6" />
+            <Label fx:id="statPlayer4" layoutX="20.0" layoutY="212.0" text="Player 4" />
+            <Label fx:id="statPlayer5" layoutX="21.0" layoutY="267.0" text="Player 5" />
+            <Label fx:id="statPlayer6" layoutX="21.0" layoutY="325.0" text="Player 6" />
             <ListView fx:id="dataPlayer1" layoutX="110.0" layoutY="39.0" prefHeight="47.0" prefWidth="187.0" />
             <ListView fx:id="dataPlayer2" layoutX="110.0" layoutY="93.0" prefHeight="47.0" prefWidth="187.0" />
             <ListView fx:id="dataPlayer3" layoutX="110.0" layoutY="146.0" prefHeight="47.0" prefWidth="187.0" />
@@ -128,12 +128,11 @@
             <ListView fx:id="dataPlayer6" layoutX="110.0" layoutY="310.0" prefHeight="47.0" prefWidth="187.0" />
          </children>
       </Pane>
-      <Pane layoutX="151.0" layoutY="387.0" prefHeight="148.0" prefWidth="202.0">
+      <Pane layoutX="151.0" layoutY="387.0" prefHeight="132.0" prefWidth="202.0">
          <children>
-            <Label layoutX="85.0" layoutY="6.0" text="Trade" />
-            <Label layoutX="35.0" layoutY="42.0" text="Would you like to trade?" />
-            <Button fx:id="ButtonYes" layoutX="35.0" layoutY="87.0" mnemonicParsing="false" text="Yes" />
-            <Button fx:id="ButtonNo" layoutX="131.0" layoutY="87.0" mnemonicParsing="false" text="No" />
+            <Button fx:id="rollDice" layoutX="18.0" layoutY="27.0" mnemonicParsing="false" text="Roll dice" />
+            <Button fx:id="manageProperties" layoutX="41.0" layoutY="74.0" mnemonicParsing="false" text="Manage properties" />
+            <Button fx:id="trade" layoutX="125.0" layoutY="27.0" mnemonicParsing="false" text="Trade" />
          </children>
       </Pane>
    </children>
