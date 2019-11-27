@@ -2,7 +2,7 @@ package Game;
 
 public class Die {
     int facets;
-    int result;
+    public int result;
 
     public Die(int facets) {
         this.facets = facets;

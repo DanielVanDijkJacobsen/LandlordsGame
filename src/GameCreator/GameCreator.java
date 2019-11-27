@@ -78,23 +78,26 @@ public class GameCreator {
                     randomizeTurnOrder.isSelected());
             JSONImporter jsonImporter = new JSONImporter();
             theGame.board = jsonImporter.createBoardJSON((String) boardOfChoice.getValue());
-            Player player1 = new Player(namePlayer1.getCharacters().toString());
+            Player player1 = new Player(namePlayer1.getCharacters().toString(), 1);
             theGame.players.add(player1);
-            Player player2 = new Player(namePlayer2.getCharacters().toString());
+            Player player2 = new Player(namePlayer2.getCharacters().toString(), 2);
             theGame.players.add(player2);
-            Player player3 = new Player(namePlayer3.getCharacters().toString());
+            Player player3 = new Player(namePlayer3.getCharacters().toString(), 3);
             theGame.players.add(player3);
             if (Integer.parseInt((String) numberOfPlayers.getValue()) > 3) {
-                Player player4 = new Player(namePlayer4.getCharacters().toString());
+                Player player4 = new Player(namePlayer4.getCharacters().toString(), 4);
                 theGame.players.add(player4);
                 if (Integer.parseInt((String) numberOfPlayers.getValue()) > 4) {
-                    Player player5 = new Player(namePlayer5.getCharacters().toString());
+                    Player player5 = new Player(namePlayer5.getCharacters().toString(), 5);
                     theGame.players.add(player5);
                     if (Integer.parseInt((String) numberOfPlayers.getValue()) > 5) {
-                        Player player6 = new Player(namePlayer6.getCharacters().toString());
+                        Player player6 = new Player(namePlayer6.getCharacters().toString(), 6);
                         theGame.players.add(player6);
                     }
                 }
+            }
+            if (theGame.randomizeTurnOrder) {
+                theGame.randomizeTurnOrder();
             }
             try {
                 Stage gameCreatorStage = new Stage();
