@@ -8,6 +8,6 @@ import java.util.HashMap;
 
 public class Board implements Serializable {
     public ArrayList<Plot> plotsOnBoard = new ArrayList<>();
-    public HashMap<Integer, Integer> ownerships = new HashMap<>();
+    public HashMap<Integer, Integer> ownerships = new HashMap<>(); //First integer is the plotID, second integer is playerID.
 
 }

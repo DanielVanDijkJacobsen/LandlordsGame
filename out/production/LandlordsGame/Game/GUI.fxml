@@ -1,139 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GUI">
+
+<AnchorPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GUI">
    <children>
-      <GridPane prefHeight="702.0" prefWidth="906.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot25" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot26" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot27" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot28" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot29" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot30" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot31" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot32" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot33" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot34" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot35" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot36" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot37" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot38" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot39" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot40" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="plot0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="100.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+      <Rectangle fx:id="player1box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="220.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player2box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="400.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player3box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player4box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="220.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player5box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="400.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player6box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Button fx:id="tradeButton" layoutX="107.0" layoutY="227.0" mnemonicParsing="false" text="Trade" />
+      <Button fx:id="propertiesPlots" layoutX="95.0" layoutY="287.0" mnemonicParsing="false" text="Properties" />
+      <Button fx:id="rollDice" layoutX="98.0" layoutY="347.0" mnemonicParsing="false" text="Roll Dice" />
+      <Button fx:id="savegameButton" layoutX="722.0" layoutY="1.0" mnemonicParsing="false" text="Save Game" />
+      <Pane fx:id="playerPane1" layoutX="220.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Canvas fx:id="board1" height="65.0" width="82.0" />
-            <Canvas fx:id="board2" height="65.0" layoutX="10.0" layoutY="10.0" width="82.0" GridPane.columnIndex="1" />
-            <Canvas fx:id="board3" height="65.0" layoutX="91.0" layoutY="10.0" width="82.0" GridPane.columnIndex="2" />
-            <Canvas fx:id="board4" height="65.0" layoutX="10.0" layoutY="10.0" width="82.0" GridPane.columnIndex="3" />
-            <Canvas height="65.0" layoutX="10.0" layoutY="10.0" width="82.0" GridPane.columnIndex="4" />
-            <Canvas height="65.0" layoutX="10.0" layoutY="10.0" width="82.0" GridPane.columnIndex="5" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="6" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="7" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="8" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="9" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="6" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="7" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="8" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="9" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="10" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="9" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="8" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="7" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="6" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="5" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="10" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="9" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="8" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="7" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="6" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="5" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="4" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="3" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="2" />
-            <Canvas height="65.0" width="82.0" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-      <Pane id="Player" layoutX="186.0" layoutY="176.0" prefHeight="174.0" prefWidth="129.0" styleClass="Player">
-         <children>
-            <Circle fx:id="Player1" fill="DODGERBLUE" layoutX="29.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player2" fill="#2fdd1c" layoutX="98.0" layoutY="23.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player3" fill="#eb2020" layoutX="29.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player4" fill="#fffc1f" layoutX="98.0" layoutY="85.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player5" fill="#b51fff" layoutX="29.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="Player6" layoutX="98.0" layoutY="148.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="playerName1" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth1" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition1" layoutX="63.0" layoutY="89.0" text="position" />
          </children>
       </Pane>
-      <Label layoutX="229.0" layoutY="158.0" text="Players">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Pane layoutX="457.0" layoutY="147.0" prefHeight="425.0" prefWidth="329.0">
+      <Pane fx:id="playerPane2" layoutX="400.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label layoutX="110.0" layoutY="6.0" text="The players statistic" />
-            <Label fx:id="Player1" layoutX="22.0" layoutY="51.0" text="Player 1">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label fx:id="Player3" layoutX="21.0" layoutY="161.0" text="Player 3">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label fx:id="Player2" layoutX="21.0" layoutY="108.0" text="Player 2">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
-            </Label>
-            <Label fx:id="Player4" layoutX="20.0" layoutY="212.0" text="Player 4" />
-            <Label fx:id="Player5" layoutX="21.0" layoutY="267.0" text="Player 5" />
-            <Label fx:id="Player6" layoutX="21.0" layoutY="325.0" text="Player 6" />
-            <ListView fx:id="dataPlayer1" layoutX="110.0" layoutY="39.0" prefHeight="47.0" prefWidth="187.0" />
-            <ListView fx:id="dataPlayer2" layoutX="110.0" layoutY="93.0" prefHeight="47.0" prefWidth="187.0" />
-            <ListView fx:id="dataPlayer3" layoutX="110.0" layoutY="146.0" prefHeight="47.0" prefWidth="187.0" />
-            <ListView fx:id="dataPlayer4" layoutX="110.0" layoutY="197.0" prefHeight="47.0" prefWidth="187.0" />
-            <ListView fx:id="dataPlayer5" layoutX="110.0" layoutY="252.0" prefHeight="47.0" prefWidth="187.0" />
-            <ListView fx:id="dataPlayer6" layoutX="110.0" layoutY="310.0" prefHeight="47.0" prefWidth="187.0" />
+            <Label fx:id="playerName2" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth2" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition2" layoutX="63.0" layoutY="89.0" text="position" />
          </children>
       </Pane>
-      <Pane layoutX="151.0" layoutY="387.0" prefHeight="148.0" prefWidth="202.0">
+      <Pane fx:id="playerPane3" layoutX="580.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label layoutX="85.0" layoutY="6.0" text="Trade" />
-            <Label layoutX="35.0" layoutY="42.0" text="Would you like to trade?" />
-            <Button fx:id="ButtonYes" layoutX="35.0" layoutY="87.0" mnemonicParsing="false" text="Yes" />
-            <Button fx:id="ButtonNo" layoutX="131.0" layoutY="87.0" mnemonicParsing="false" text="No" />
+            <Label fx:id="playerName3" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth3" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition3" layoutX="63.0" layoutY="89.0" text="position" />
+         </children>
+      </Pane>
+      <Pane fx:id="playerPane4" layoutX="220.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
+         <children>
+            <Label fx:id="playerName4" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth4" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition4" layoutX="63.0" layoutY="89.0" text="position" />
+         </children>
+      </Pane>
+      <Pane fx:id="playerPane5" layoutX="400.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
+         <children>
+            <Label fx:id="playerName5" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth5" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition5" layoutX="63.0" layoutY="89.0" text="position" />
+         </children>
+      </Pane>
+      <Pane fx:id="playerPane6" layoutX="580.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
+         <children>
+            <Label fx:id="playerName6" layoutX="11.0" layoutY="14.0" text="Name" />
+            <Label fx:id="playerWealth6" layoutX="41.0" layoutY="52.0" text="Wealth" />
+            <Label fx:id="playerPosition6" layoutX="63.0" layoutY="89.0" text="position" />
+         </children>
+      </Pane>
+      <Circle fx:id="playerToken1" fill="WHITE" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken2" fill="WHITE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken3" fill="WHITE" layoutX="710.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken4" fill="WHITE" layoutX="350.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken5" fill="WHITE" layoutX="530.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken6" fill="WHITE" layoutX="710.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Pane fx:id="plotPane0" layoutX="101.0" layoutY="120.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue0" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle0" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane1" layoutX="10.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue1" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle1" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane2" layoutX="70.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue2" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle2" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane3" layoutX="130.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue3" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle3" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane4" layoutX="190.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue4" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle4" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane5" layoutX="250.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue5" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle5" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane6" layoutX="310.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue6" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle6" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane7" layoutX="370.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue7" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle7" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane8" layoutX="430.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue8" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle8" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane9" layoutX="490.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue9" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle9" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane10" layoutX="550.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue10" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle10" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane11" layoutX="610.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue11" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle11" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane12" layoutX="670.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue12" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle12" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane13" layoutX="730.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue13" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle13" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane14" layoutX="730.0" layoutY="90.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue14" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle14" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane15" layoutX="730.0" layoutY="150.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue15" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle15" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane16" layoutX="730.0" layoutY="210.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue16" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle16" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane17" layoutX="730.0" layoutY="270.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue17" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle17" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane18" layoutX="730.0" layoutY="330.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue18" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle18" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane19" layoutX="730.0" layoutY="390.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue19" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle19" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane20" layoutX="730.0" layoutY="450.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue20" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle20" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane21" layoutX="730.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue21" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle21" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane22" layoutX="670.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue22" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle22" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane23" layoutX="610.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue23" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle23" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane24" layoutX="550.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue24" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle24" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane25" layoutX="490.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue25" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle25" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane26" layoutX="430.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue26" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle26" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane27" layoutX="370.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue27" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle27" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane28" layoutX="310.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue28" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle28" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane29" layoutX="250.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue29" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle29" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane30" layoutX="190.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue30" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle30" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane31" layoutX="131.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue31" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle31" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane32" layoutX="70.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue32" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle32" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane33" layoutX="10.0" layoutY="510.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue33" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle33" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane34" layoutX="10.0" layoutY="450.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue34" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle34" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane35" layoutX="10.0" layoutY="390.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue35" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle35" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane36" layoutX="10.0" layoutY="330.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue36" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle36" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane37" layoutX="10.0" layoutY="270.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue37" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle37" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane38" layoutX="10.0" layoutY="210.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue38" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle38" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane39" layoutX="10.0" layoutY="150.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue39" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle39" layoutX="17.0" layoutY="15.0" text="Title" />
+         </children>
+      </Pane>
+      <Pane fx:id="plotPane40" layoutX="10.0" layoutY="90.0" prefHeight="60.0" prefWidth="60.0">
+         <children>
+            <Label fx:id="plotValue40" layoutX="16.0" layoutY="30.0" text="Value" />
+            <Label fx:id="plotTitle40" layoutX="17.0" layoutY="15.0" text="Title" />
          </children>
       </Pane>
    </children>

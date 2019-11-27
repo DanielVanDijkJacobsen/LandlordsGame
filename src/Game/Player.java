@@ -11,7 +11,6 @@ public class Player implements Serializable {
     public int wealth;
     public int value;
     public int boardPosition;
-    public ArrayList<Plot> ownerships = new ArrayList<>();
 
     public Player(String name, int ID) {
         this.name = name;
