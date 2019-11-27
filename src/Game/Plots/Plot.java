@@ -1,13 +1,12 @@
 package Game.Plots;
 
-public class Plot {
-    int ID;
+import java.io.Serializable;
+
+public class Plot implements Serializable {
+    public int ID;
 
     public Plot(int ID) {
         this.ID = ID;
     }
 
-    public int getID() {
-        return ID;
-    }
 }

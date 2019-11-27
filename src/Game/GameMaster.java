@@ -2,6 +2,7 @@ package Game;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GameMaster implements Serializable {
     public ArrayList<Player> players;
@@ -13,7 +14,9 @@ public class GameMaster implements Serializable {
     boolean endOnBankruptcy;
     boolean endOnOverwhelmingWealth;
     boolean differingInheritance;
-    boolean randomizeTurnOrder;
+    public boolean randomizeTurnOrder;
+    public int turnOrder;
+
 
     public GameMaster(int roundsLeft, String boardType, boolean auctionIfNotBought,
                       boolean fastStart, boolean endOnBankruptcy, boolean endOnOverwhelmingWealth,
@@ -27,5 +30,26 @@ public class GameMaster implements Serializable {
         this.endOnOverwhelmingWealth = endOnOverwhelmingWealth;
         this.differingInheritance = differingInheritance;
         this.randomizeTurnOrder = randomizeTurnOrder;
+        this.turnOrder = 0;
+    }
+
+    public void randomizeTurnOrder() {
+        Collections.shuffle(this.players);
+    }
+
+    public void endTurn() {
+        this.turnOrder++;
+        if (this.turnOrder == this.players.size()) {
+            this.turnOrder = 0;
+        }
+    }
+
+    public void assignOwnershipOfPlot(int plotID, int playerID) {
+        this.board.ownerships.remove(plotID);
+        this.board.ownerships.put(plotID,playerID);
+    }
+
+    public int determineOwnershipOfPlot(int plotID) {
+        return this.board.ownerships.get(plotID);
     }
 }
