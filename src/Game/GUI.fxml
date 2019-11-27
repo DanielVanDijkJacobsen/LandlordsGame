@@ -103,7 +103,7 @@
             <Label fx:id="playerPosition6" layoutX="63.0" layoutY="89.0" text="position" />
          </children>
       </Pane>
-      <Circle fx:id="playerToken1" fill="WHITE" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken1" fill="RED" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken2" fill="WHITE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken3" fill="WHITE" layoutX="710.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken4" fill="WHITE" layoutX="350.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
