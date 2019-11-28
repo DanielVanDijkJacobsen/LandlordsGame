@@ -39,7 +39,9 @@ public class GUI {
     @FXML
     private void rollDiceAction(Event event) {
         theGame.throwDiceToMove(theGame.players.get(0));
-        System.out.print(plot1.getX());
+        System.out.println(plot1.getX());
+        System.out.println(playerToken1.getCenterX());
+        System.out.println(theGame.players.get(0).boardPosition);
         playerToken1.setCenterX(plots.get(theGame.players.get(0).boardPosition).getX());
         playerToken1.setCenterY(plots.get(theGame.players.get(0).boardPosition).getY());
     }
