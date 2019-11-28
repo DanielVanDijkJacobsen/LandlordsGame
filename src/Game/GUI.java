@@ -31,7 +31,7 @@ public class GUI {
     @FXML private Rectangle plot33; @FXML private Rectangle plot34; @FXML private Rectangle plot35;
     @FXML private Rectangle plot36; @FXML private Rectangle plot37; @FXML private Rectangle plot38;
     @FXML private Rectangle plot39; @FXML private Rectangle plot40;
-    @FXML public ArrayList<Rectangle> plots = new ArrayList<>(Arrays.asList(plot0, plot1, plot2, plot3, plot4, plot5,
+    @FXML private ArrayList<Rectangle> plots = new ArrayList<>(Arrays.asList(plot0, plot1, plot2, plot3, plot4, plot5,
             plot6, plot7, plot8, plot9, plot10, plot11, plot12, plot13, plot14, plot15, plot16, plot17, plot18, plot19,
             plot20, plot21, plot22, plot23, plot24, plot25, plot26, plot27, plot28, plot29, plot30, plot31, plot32,
             plot33, plot34, plot35, plot36, plot37, plot38, plot39, plot40));
@@ -39,11 +39,12 @@ public class GUI {
     @FXML
     private void rollDiceAction(Event event) {
         theGame.throwDiceToMove(theGame.players.get(0));
-        System.out.println(plot1.getX());
-        System.out.println(playerToken1.getCenterX());
+        System.out.println(plot1.getLayoutX());
+        System.out.println(theGame.players.get(0).name);
+        System.out.println(playerToken1.getLayoutX());
         System.out.println(theGame.players.get(0).boardPosition);
-        playerToken1.setCenterX(plots.get(theGame.players.get(0).boardPosition).getX());
-        playerToken1.setCenterY(plots.get(theGame.players.get(0).boardPosition).getY());
+        playerToken1.setLayoutY(plot0.getLayoutY());
+        playerToken1.setLayoutX(plots.get(theGame.players.get(0).boardPosition).getLayoutX());
+        playerToken1.setLayoutY(plots.get(theGame.players.get(0).boardPosition).getLayoutY());
     }
-
 }
