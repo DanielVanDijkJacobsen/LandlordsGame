@@ -7,7 +7,6 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 
-
 <AnchorPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GUI">
    <children>
       <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
@@ -59,7 +58,7 @@
       <Rectangle fx:id="player6box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
       <Button fx:id="tradeButton" layoutX="107.0" layoutY="227.0" mnemonicParsing="false" text="Trade" />
       <Button fx:id="propertiesPlots" layoutX="95.0" layoutY="287.0" mnemonicParsing="false" text="Properties" />
-      <Button fx:id="rollDice" layoutX="98.0" layoutY="347.0" mnemonicParsing="false" text="Roll Dice" />
+      <Button fx:id="rollDice" layoutX="98.0" layoutY="347.0" mnemonicParsing="false" onAction="#rollDiceAction" text="Roll Dice" />
       <Button fx:id="savegameButton" layoutX="722.0" layoutY="1.0" mnemonicParsing="false" text="Save Game" />
       <Pane fx:id="playerPane1" layoutX="220.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
@@ -103,7 +102,7 @@
             <Label fx:id="playerPosition6" layoutX="63.0" layoutY="89.0" text="position" />
          </children>
       </Pane>
-      <Circle fx:id="playerToken1" fill="WHITE" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="playerToken1" fill="RED" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken2" fill="WHITE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken3" fill="WHITE" layoutX="710.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fx:id="playerToken4" fill="WHITE" layoutX="350.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
