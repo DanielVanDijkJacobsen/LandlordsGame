@@ -107,11 +107,11 @@
       </Pane>
       <Group fx:id="playerTokens">
          <Circle fx:id="playerToken1" fill="RED" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-         <Circle fx:id="playerToken2" fill="WHITE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-         <Circle fx:id="playerToken3" fill="WHITE" layoutX="710.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-         <Circle fx:id="playerToken4" fill="WHITE" layoutX="350.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-         <Circle fx:id="playerToken5" fill="WHITE" layoutX="530.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
-         <Circle fx:id="playerToken6" fill="WHITE" layoutX="710.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="playerToken2" fill="BLUE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="playerToken3" fill="YELLOW" layoutX="710.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="playerToken4" fill="PURPLE" layoutX="350.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="playerToken5" fill="GREEN" layoutX="530.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+         <Circle fx:id="playerToken6" fill="ORANGE" layoutX="710.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
       </Group>
       <Pane fx:id="plotPane0" layoutX="101.0" layoutY="120.0" prefHeight="60.0" prefWidth="60.0">
          <children>
