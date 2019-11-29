@@ -27,6 +27,7 @@ public class GUI {
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         if (theGame.players.get(theGame.turnOrder).boardPosition > 40) {
             theGame.players.get(theGame.turnOrder).boardPosition = theGame.players.get(theGame.turnOrder).boardPosition -40;
+            theGame.players.get(theGame.turnOrder).wealth = theGame.players.get(theGame.turnOrder).wealth + 4000;
         }
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutY());
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutX());
