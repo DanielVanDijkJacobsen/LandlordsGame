@@ -6,50 +6,53 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.Group?>
 
 <AnchorPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GUI">
    <children>
-      <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot25" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot26" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot27" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot28" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot29" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot30" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot31" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot32" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot33" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot34" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot35" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot36" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot37" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot38" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot39" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot40" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-      <Rectangle fx:id="plot0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="100.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+         <Group fx:id="plots">
+            <Rectangle fx:id="plot0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="100.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot25" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot26" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot27" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot28" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot29" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot30" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot31" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot32" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot33" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot34" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot35" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot36" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot37" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot38" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot39" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot40" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+         </Group>
       <Rectangle fx:id="player1box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="220.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
       <Rectangle fx:id="player2box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="400.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
       <Rectangle fx:id="player3box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
