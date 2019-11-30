@@ -23,6 +23,10 @@ public class GUI {
 
     @FXML
     private void rollDiceAction(Event event) {
+        if (theGame.players.get(theGame.turnOrder).boardPosition == 0) {
+            //Determine if in jail.
+            //Make jail actions. Break and Return functions to break method.
+        }
         theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         if (theGame.players.get(theGame.turnOrder).boardPosition > 40) {
@@ -31,7 +35,25 @@ public class GUI {
         }
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutY());
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutX());
+        if (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).event != null) {
+            //Do event stuff.
+        } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
+            //Do buy property stuff.
+        } else {
+            //Do payment stuff.
+        }
+        if (theGame.die1.result == theGame.die2.result) {
+            //Take an extra turn.
+            if (theGame.die1.result == theGame.die2.result) {
+                //Take another extra turn.
+                if (theGame.die1.result == theGame.die2.result) {
+                    //Go to jail, you criminal, think of the dice!
+                    theGame.players.get(theGame.turnOrder).boardPosition = 0;
+                }
+            }
+        }
         updatePlayerStatistics();
+        //Check for bankruptcy and game objectives.
         theGame.endTurn();
     }
 
