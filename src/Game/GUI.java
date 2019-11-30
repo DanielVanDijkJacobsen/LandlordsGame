@@ -24,10 +24,10 @@ public class GUI {
     @FXML
     private void rollDiceAction(Event event) {
         if (theGame.players.get(theGame.turnOrder).boardPosition == 0) {
-            //Determine if in jail.
             //Make jail actions. Break and Return functions to break method.
+        } else {
+            theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
         }
-        theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         if (theGame.players.get(theGame.turnOrder).boardPosition > 40) {
             theGame.players.get(theGame.turnOrder).boardPosition = theGame.players.get(theGame.turnOrder).boardPosition -40;
@@ -43,13 +43,17 @@ public class GUI {
             //Do payment stuff.
         }
         if (theGame.die1.result == theGame.die2.result) {
+            theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
             //Take an extra turn.
             if (theGame.die1.result == theGame.die2.result) {
-                //Take another extra turn.
+                theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
                 if (theGame.die1.result == theGame.die2.result) {
                     //Go to jail, you criminal, think of the dice!
                     theGame.players.get(theGame.turnOrder).boardPosition = 0;
+                } else {
+                    //Take another extra turn.
                 }
+
             }
         }
         updatePlayerStatistics();
