@@ -16,7 +16,8 @@ public class GameMaster implements Serializable {
     boolean differingInheritance;
     public boolean randomizeTurnOrder;
     public int turnOrder;
-
+    Die die1;
+    Die die2;
 
     public GameMaster(int roundsLeft, String boardType, boolean auctionIfNotBought,
                       boolean fastStart, boolean endOnBankruptcy, boolean endOnOverwhelmingWealth,
@@ -31,6 +32,8 @@ public class GameMaster implements Serializable {
         this.differingInheritance = differingInheritance;
         this.randomizeTurnOrder = randomizeTurnOrder;
         this.turnOrder = 0;
+        this.die1 = new Die(6);
+        this.die2 = new Die(6);
     }
 
     public void randomizeTurnOrder() {
@@ -51,5 +54,10 @@ public class GameMaster implements Serializable {
 
     public int determineOwnershipOfPlot(int plotID) {
         return this.board.ownerships.get(plotID);
+    }
+
+    public void throwDiceToMove(Player playerToMove) {
+        this.die1.roll(); this.die2.roll();
+        playerToMove.boardPosition = playerToMove.boardPosition + this.die1.result + this.die2.result;
     }
 }

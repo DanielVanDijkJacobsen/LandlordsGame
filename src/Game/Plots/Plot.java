@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Plot implements Serializable {
     public int ID;
     int value;
-    String event; String title;
+    public String event; String title;
     int rent[];
     String district;
 
