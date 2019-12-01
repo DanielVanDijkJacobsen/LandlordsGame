@@ -92,8 +92,35 @@ public class GUI {
                     theGame.players.get(5).javaFXlabels.put("Name",playerName6);
                     theGame.players.get(5).javaFXlabels.put("Wealth",playerWealth6);
                     theGame.players.get(5).javaFXlabels.put("Placement",playerPosition6);
+                } else {
+                    playerName6.setVisible(false);
+                    playerWealth6.setVisible(false);
+                    playerPosition6.setVisible(false);
+                    playerTokens.getChildren().get(5).setVisible(false);
                 }
+            } else {
+                playerName5.setVisible(false);
+                playerWealth5.setVisible(false);
+                playerPosition5.setVisible(false);
+                playerTokens.getChildren().get(4).setVisible(false);
+                playerName6.setVisible(false);
+                playerWealth6.setVisible(false);
+                playerPosition6.setVisible(false);
+                playerTokens.getChildren().get(5).setVisible(false);
             }
+        } else {
+            playerName4.setVisible(false);
+            playerWealth4.setVisible(false);
+            playerPosition4.setVisible(false);
+            playerTokens.getChildren().get(3).setVisible(false);
+            playerName5.setVisible(false);
+            playerWealth5.setVisible(false);
+            playerPosition5.setVisible(false);
+            playerTokens.getChildren().get(4).setVisible(false);
+            playerName6.setVisible(false);
+            playerWealth6.setVisible(false);
+            playerPosition6.setVisible(false);
+            playerTokens.getChildren().get(5).setVisible(false);
         }
     }
 }
