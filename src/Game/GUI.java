@@ -62,23 +62,38 @@ public class GUI {
     }
 
     private void updatePlayerStatistics() {
-        this.playerName1.setText(theGame.players.get(0).name);
-        this.playerName2.setText(theGame.players.get(1).name);
-        this.playerName3.setText(theGame.players.get(2).name);
-        this.playerName4.setText(theGame.players.get(3).name);
-        this.playerName5.setText(theGame.players.get(4).name);
-        this.playerName6.setText(theGame.players.get(5).name);
-        this.playerWealth1.setText(theGame.players.get(0).wealth + ",-");
-        this.playerWealth2.setText(theGame.players.get(1).wealth + ",-");
-        this.playerWealth3.setText(theGame.players.get(2).wealth + ",-");
-        this.playerWealth4.setText(theGame.players.get(3).wealth + ",-");
-        this.playerWealth5.setText(theGame.players.get(4).wealth + ",-");
-        this.playerWealth6.setText(theGame.players.get(5).wealth + ",-");
-        this.playerPosition1.setText("Placement: " + theGame.players.get(0).boardPosition);
-        this.playerPosition2.setText("Placement: " + theGame.players.get(1).boardPosition);
-        this.playerPosition3.setText("Placement: " + theGame.players.get(2).boardPosition);
-        this.playerPosition4.setText("Placement: " + theGame.players.get(3).boardPosition);
-        this.playerPosition5.setText("Placement: " + theGame.players.get(4).boardPosition);
-        this.playerPosition6.setText("Placement: " + theGame.players.get(5).boardPosition);
+        for (int i = 0; i < theGame.players.size(); i++) {
+            theGame.players.get(i).javaFXlabels.get("Name").setText(theGame.players.get(i).name);
+            theGame.players.get(i).javaFXlabels.get("Wealth").setText(theGame.players.get(i).wealth + ",-");
+            theGame.players.get(i).javaFXlabels.get("Placement").setText("Placement: " +
+                    theGame.players.get(i).boardPosition);
+        }
+    }
+
+    public void setupPlayers() {
+        theGame.players.get(0).javaFXlabels.put("Name",playerName1);
+        theGame.players.get(0).javaFXlabels.put("Wealth",playerWealth1);
+        theGame.players.get(0).javaFXlabels.put("Placement",playerPosition1);
+        theGame.players.get(1).javaFXlabels.put("Name",playerName2);
+        theGame.players.get(1).javaFXlabels.put("Wealth",playerWealth2);
+        theGame.players.get(1).javaFXlabels.put("Placement",playerPosition2);
+        theGame.players.get(2).javaFXlabels.put("Name",playerName3);
+        theGame.players.get(2).javaFXlabels.put("Wealth",playerWealth3);
+        theGame.players.get(2).javaFXlabels.put("Placement",playerPosition3);
+        if (theGame.players.size() > 3) {
+            theGame.players.get(3).javaFXlabels.put("Name",playerName4);
+            theGame.players.get(3).javaFXlabels.put("Wealth",playerWealth4);
+            theGame.players.get(3).javaFXlabels.put("Placement",playerPosition4);
+            if (theGame.players.size() > 4) {
+                theGame.players.get(4).javaFXlabels.put("Name",playerName5);
+                theGame.players.get(4).javaFXlabels.put("Wealth",playerWealth5);
+                theGame.players.get(4).javaFXlabels.put("Placement",playerPosition5);
+                if (theGame.players.size() > 5) {
+                    theGame.players.get(5).javaFXlabels.put("Name",playerName6);
+                    theGame.players.get(5).javaFXlabels.put("Wealth",playerWealth6);
+                    theGame.players.get(5).javaFXlabels.put("Placement",playerPosition6);
+                }
+            }
+        }
     }
 }

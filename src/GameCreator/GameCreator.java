@@ -105,6 +105,7 @@ public class GameCreator {
                 Pane root = (Pane) loader.load(getClass().getResource("/Game/GUI.fxml").openStream());
                 GUI GUI = (GUI) loader.getController();
                 GUI.theGame = theGame;
+                GUI.setupPlayers();
                 Scene scene = new Scene(root);
                 gameCreatorStage.setScene(scene);
                 gameCreatorStage.setTitle("Landlord's Game");
