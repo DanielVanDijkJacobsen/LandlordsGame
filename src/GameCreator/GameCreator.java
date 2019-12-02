@@ -55,18 +55,13 @@ public class GameCreator {
     public GameCreator() {
     }
 
-    @FXML
-    private void updateItems(Event event) {
+    public void updateItems() {
         ObservableList playerNumber = FXCollections.observableArrayList("3","4","5","6");
         this.numberOfPlayers.setItems(playerNumber);
         ObservableList numberOfRounds = FXCollections.observableArrayList("0","10","15","20","25");
         this.maxNumberOfRounds.setItems(numberOfRounds);
         ObservableList listOfBoards = FXCollections.observableArrayList("Matador");
         this.boardOfChoice.setItems(listOfBoards);
-    }
-
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     @FXML
