@@ -44,6 +44,7 @@ public class StartMenuController implements Initializable {
             Pane root = (Pane)loader.load(getClass().getResource("/GameCreator/GameCreator.fxml").openStream());
             GameCreator gameCreator = (GameCreator)loader.getController();
             Scene scene = new Scene(root);
+            gameCreator.updateItems();
             gameCreatorStage.setScene(scene);
             gameCreatorStage.setTitle("Start new game");
             gameCreatorStage.setResizable(false);
