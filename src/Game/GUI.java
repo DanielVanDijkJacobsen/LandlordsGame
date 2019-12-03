@@ -33,8 +33,10 @@ public class GUI {
             theGame.players.get(theGame.turnOrder).boardPosition = theGame.players.get(theGame.turnOrder).boardPosition -40;
             theGame.players.get(theGame.turnOrder).wealth = theGame.players.get(theGame.turnOrder).wealth + 4000;
         }
-        playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutY());
-        playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition).getLayoutX());
+        playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.
+                get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(10*theGame.turnOrder)));
+        playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.
+                get(theGame.turnOrder).boardPosition).getLayoutX()+10);
         if (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).event != null) {
             //Do event stuff.
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {

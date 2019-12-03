@@ -5,53 +5,383 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 
 <AnchorPane fx:id="board" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Game.GUI">
    <children>
          <Group fx:id="plots">
-            <Rectangle fx:id="plot0" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="100.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot10" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot11" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot13" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot14" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot15" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot16" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot17" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot18" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot19" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot20" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot21" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="730.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot22" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="670.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot23" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="610.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot24" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="550.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot25" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="490.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot26" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="430.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot27" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="370.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot28" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="310.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot29" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="250.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot30" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="190.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot31" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="130.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot32" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="70.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot33" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot34" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot35" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot36" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot37" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot38" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot39" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
-            <Rectangle fx:id="plot40" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="10.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+            <Rectangle fx:id="plot0" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="100.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="PURPLE" />
+                     <Stop color="BLACK" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot1" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="RED" />
+                     <Stop color="BLACK" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot2" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="70.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot3" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="130.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot4" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="190.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot5" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="250.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot6" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="310.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot7" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="370.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot8" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="430.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot9" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="490.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot10" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="550.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot11" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="610.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot12" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="670.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot13" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot14" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot15" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot16" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot17" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot18" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot19" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot20" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot21" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="730.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot22" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="670.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot23" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="610.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot24" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="550.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot25" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="490.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot26" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="430.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot27" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="370.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot28" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="310.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot29" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="250.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot30" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="190.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot31" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="130.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot32" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="70.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot33" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="510.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot34" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="450.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot35" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot36" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot37" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot38" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot39" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
+            <Rectangle fx:id="plot40" arcHeight="5.0" arcWidth="5.0" height="60.0" layoutX="10.0" layoutY="90.0" stroke="BLACK" strokeType="INSIDE" width="60.0">
+            <fill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop color="BLACK" />
+                     <Stop color="WHITE" offset="1.0" />
+                  </stops>
+               </LinearGradient>
+            </fill></Rectangle>
          <Group fx:id="playerTokens">
             <Circle fx:id="playerToken1" fill="RED" layoutX="350.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fx:id="playerToken2" fill="BLUE" layoutX="530.0" layoutY="280.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
@@ -61,68 +391,116 @@
             <Circle fx:id="playerToken6" fill="ORANGE" layoutX="710.0" layoutY="460.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
          </Group>
          </Group>
-      <Rectangle fx:id="player1box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="220.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-      <Rectangle fx:id="player2box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="400.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-      <Rectangle fx:id="player3box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-      <Rectangle fx:id="player4box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="220.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-      <Rectangle fx:id="player5box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="400.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
-      <Rectangle fx:id="player6box" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="120.0" layoutX="580.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0" />
+      <Rectangle fx:id="player1box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="220.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="player2box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="400.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="BLUE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="player3box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="580.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="YELLOW" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="player4box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="220.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="PURPLE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="player5box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="400.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="GREEN" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <Rectangle fx:id="player6box" arcHeight="5.0" arcWidth="5.0" height="120.0" layoutX="580.0" layoutY="330.0" stroke="BLACK" strokeType="INSIDE" width="120.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="ORANGE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
       <Button fx:id="tradeButton" layoutX="107.0" layoutY="227.0" mnemonicParsing="false" text="Trade" />
       <Button fx:id="propertiesPlots" layoutX="95.0" layoutY="287.0" mnemonicParsing="false" text="Properties" />
       <Button fx:id="rollDice" layoutX="98.0" layoutY="347.0" mnemonicParsing="false" onAction="#rollDiceAction" text="Roll Dice" />
       <Button fx:id="savegameButton" layoutX="722.0" layoutY="1.0" mnemonicParsing="false" text="Save Game" />
       <Pane fx:id="playerPane1" layoutX="220.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName1" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth1" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition1" layoutX="14.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName1" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth1" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition1" layoutX="14.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="playerPane2" layoutX="400.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName2" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth2" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition2" layoutX="11.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName2" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth2" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition2" layoutX="11.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="playerPane3" layoutX="580.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName3" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth3" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition3" layoutX="14.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName3" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth3" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition3" layoutX="14.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="playerPane4" layoutX="220.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName4" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth4" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition4" layoutX="14.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName4" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth4" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition4" layoutX="14.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="playerPane5" layoutX="400.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName5" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth5" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition5" layoutX="14.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName5" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth5" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition5" layoutX="14.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="playerPane6" layoutX="580.0" layoutY="330.0" prefHeight="120.0" prefWidth="120.0">
          <children>
-            <Label fx:id="playerName6" layoutX="11.0" layoutY="14.0" text="Name" />
-            <Label fx:id="playerWealth6" layoutX="41.0" layoutY="52.0" text="Wealth" />
-            <Label fx:id="playerPosition6" layoutX="14.0" layoutY="89.0" text="position" />
+            <Label fx:id="playerName6" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />
+            <Label fx:id="playerWealth6" layoutX="41.0" layoutY="52.0" text="Wealth" textFill="WHITE" />
+            <Label fx:id="playerPosition6" layoutX="14.0" layoutY="89.0" text="position" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="plotPane0" layoutX="101.0" layoutY="120.0" prefHeight="60.0" prefWidth="60.0">
          <children>
-            <Label fx:id="plotValue0" layoutX="16.0" layoutY="30.0" text="Value" />
-            <Label fx:id="plotTitle0" layoutX="17.0" layoutY="15.0" text="Title" />
+            <Label fx:id="plotValue0" layoutX="16.0" layoutY="30.0" text="Value" textFill="WHITE" />
+            <Label fx:id="plotTitle0" layoutX="17.0" layoutY="15.0" text="Title" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="plotPane1" layoutX="10.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
          <children>
-            <Label fx:id="plotValue1" layoutX="16.0" layoutY="30.0" text="Value" />
-            <Label fx:id="plotTitle1" layoutX="17.0" layoutY="15.0" text="Title" />
+            <Label fx:id="plotValue1" layoutX="16.0" layoutY="30.0" text="Value" textFill="WHITE" />
+            <Label fx:id="plotTitle1" layoutX="17.0" layoutY="15.0" text="Title" textFill="WHITE" />
          </children>
       </Pane>
       <Pane fx:id="plotPane2" layoutX="70.0" layoutY="30.0" prefHeight="60.0" prefWidth="60.0">
