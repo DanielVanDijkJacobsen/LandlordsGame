@@ -73,6 +73,7 @@ public class GameCreator {
                     randomizeTurnOrder.isSelected());
             JSONImporter jsonImporter = new JSONImporter();
             theGame.board = jsonImporter.createBoardJSON((String) boardOfChoice.getValue());
+            theGame.chanceDeck = jsonImporter.createChanceDeckJson((String) boardOfChoice.getValue());
             Player player1 = new Player(namePlayer1.getCharacters().toString(), 1);
             theGame.players.add(player1);
             Player player2 = new Player(namePlayer2.getCharacters().toString(), 2);

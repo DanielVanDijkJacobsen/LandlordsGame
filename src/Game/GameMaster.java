@@ -16,6 +16,7 @@ public class GameMaster implements Serializable {
     boolean differingInheritance;
     public boolean randomizeTurnOrder;
     public int turnOrder;
+    public ChanceDeck chanceDeck;
     Die die1;
     Die die2;
 
