@@ -3,8 +3,14 @@ package Game;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
+import javafx.scene.shape.Rectangle;
 
 public class GUI {
     public GameMaster theGame;
@@ -69,6 +75,18 @@ public class GUI {
             theGame.players.get(i).javaFXlabels.get("Wealth").setText(theGame.players.get(i).wealth + ",-");
             theGame.players.get(i).javaFXlabels.get("Placement").setText("Placement: " +
                     theGame.players.get(i).boardPosition);
+        }
+    }
+
+    public void setupBoard() {
+        for (int i =0; i < plots.getChildren().size(); i++) {
+            Node nodeRectangle = plots.getChildren().get(i);
+            if (nodeRectangle instanceof Rectangle && theGame.board.plotsOnBoard.get(i).district != null) {
+                Stop[] stops = new Stop[] {new Stop(0, Color.BLACK),
+                        new Stop(1, Color.valueOf(theGame.board.plotsOnBoard.get(i).district))};
+                LinearGradient linearGradient = new LinearGradient(0,0,1,1,true, CycleMethod.NO_CYCLE, stops);
+                ((Rectangle) nodeRectangle).setFill(linearGradient);
+            }
         }
     }
 
