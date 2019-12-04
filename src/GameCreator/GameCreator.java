@@ -103,6 +103,8 @@ public class GameCreator {
                 GUI.theGame = theGame;
                 GUI.setupPlayers();
                 GUI.setupBoard();
+                GUI.updatePlayerStatistics();
+                GUI.updatePlayerTokens();
                 Scene scene = new Scene(root);
                 gameCreatorStage.setScene(scene);
                 gameCreatorStage.setTitle("Landlord's Game");

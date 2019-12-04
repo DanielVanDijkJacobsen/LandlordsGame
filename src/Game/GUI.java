@@ -35,14 +35,7 @@ public class GUI {
             theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
         }
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
-        if (theGame.players.get(theGame.turnOrder).boardPosition > 40) {
-            theGame.players.get(theGame.turnOrder).boardPosition = theGame.players.get(theGame.turnOrder).boardPosition -40;
-            theGame.players.get(theGame.turnOrder).wealth = theGame.players.get(theGame.turnOrder).wealth + 4000;
-        }
-        playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.
-                get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(10*theGame.turnOrder)));
-        playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.
-                get(theGame.turnOrder).boardPosition).getLayoutX()+10);
+        updatePlayerTokens();
         if (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).event != null) {
             //Do event stuff.
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
@@ -52,12 +45,15 @@ public class GUI {
         }
         if (theGame.die1.result == theGame.die2.result) {
             theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
+            updatePlayerTokens();
             //Take an extra turn.
             if (theGame.die1.result == theGame.die2.result) {
                 theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
+                updatePlayerTokens();
                 if (theGame.die1.result == theGame.die2.result) {
                     //Go to jail, you criminal, think of the dice!
                     theGame.players.get(theGame.turnOrder).boardPosition = 0;
+                    updatePlayerTokens();
                 } else {
                     //Take another extra turn.
                 }
@@ -69,7 +65,14 @@ public class GUI {
         theGame.endTurn();
     }
 
-    private void updatePlayerStatistics() {
+    public void updatePlayerTokens() {
+        playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.
+                get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(6*theGame.turnOrder)));
+        playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.
+                get(theGame.turnOrder).boardPosition).getLayoutX()+10);
+    }
+
+    public void updatePlayerStatistics() {
         for (int i = 0; i < theGame.players.size(); i++) {
             theGame.players.get(i).javaFXlabels.get("Name").setText(theGame.players.get(i).name);
             theGame.players.get(i).javaFXlabels.get("Wealth").setText(theGame.players.get(i).wealth + ",-");
