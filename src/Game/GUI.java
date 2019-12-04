@@ -36,7 +36,7 @@ public class GUI {
         }
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         updatePlayerTokens();
-        if (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).event != null) {
+        if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)-1).event != null) {
             //Do event stuff.
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
@@ -67,9 +67,18 @@ public class GUI {
 
     public void updatePlayerTokens() {
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.
-                get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(6*theGame.turnOrder)));
+                get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(8*theGame.turnOrder)));
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutX(plots.getChildren().get(theGame.players.
                 get(theGame.turnOrder).boardPosition).getLayoutX()+10);
+    }
+
+    public void updateAllPlayerTokens() {
+        for (int i = 0; i < theGame.players.size(); i++) {
+            playerTokens.getChildren().get(i).setLayoutY(plots.getChildren().get(theGame.players.get(i).boardPosition).
+                    getLayoutY()+(10+(8*i)));
+            playerTokens.getChildren().get(i).setLayoutX(plots.getChildren().get(theGame.players.get(i).boardPosition).
+                    getLayoutX()+10);
+        }
     }
 
     public void updatePlayerStatistics() {
