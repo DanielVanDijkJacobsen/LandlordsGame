@@ -1,6 +1,5 @@
 package StartMenu;
 
-import Game.GUI;
 import GameCreator.GameCreator;
 import LoadGameInterface.LoadGameScreen;
 import Options.OptionsInterface;

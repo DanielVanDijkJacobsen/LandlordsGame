@@ -7,7 +7,6 @@ import Game.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,8 +14,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class GameCreator {
     @FXML
@@ -73,6 +70,7 @@ public class GameCreator {
                     randomizeTurnOrder.isSelected());
             JSONImporter jsonImporter = new JSONImporter();
             theGame.board = jsonImporter.createBoardJSON((String) boardOfChoice.getValue());
+            theGame.chanceDeck = jsonImporter.createChanceDeckJson((String) boardOfChoice.getValue());
             Player player1 = new Player(namePlayer1.getCharacters().toString(), 1);
             theGame.players.add(player1);
             Player player2 = new Player(namePlayer2.getCharacters().toString(), 2);
@@ -101,6 +99,9 @@ public class GameCreator {
                 GUI GUI = (GUI) loader.getController();
                 GUI.theGame = theGame;
                 GUI.setupPlayers();
+                GUI.setupBoard();
+                GUI.updatePlayerStatistics();
+                GUI.updateAllPlayerTokens();
                 Scene scene = new Scene(root);
                 gameCreatorStage.setScene(scene);
                 gameCreatorStage.setTitle("Landlord's Game");

@@ -16,6 +16,7 @@ public class GameMaster implements Serializable {
     boolean differingInheritance;
     public boolean randomizeTurnOrder;
     public int turnOrder;
+    public ChanceDeck chanceDeck;
     Die die1;
     Die die2;
 
@@ -59,5 +60,9 @@ public class GameMaster implements Serializable {
     public void throwDiceToMove(Player playerToMove) {
         this.die1.roll(); this.die2.roll();
         playerToMove.boardPosition = playerToMove.boardPosition + this.die1.result + this.die2.result;
+        if (playerToMove.boardPosition > this.board.plotsOnBoard.size()-1) {
+            playerToMove.wealth = playerToMove.wealth + 4000;
+            playerToMove.boardPosition = playerToMove.boardPosition -(this.board.plotsOnBoard.size()-1);
+        }
     }
 }

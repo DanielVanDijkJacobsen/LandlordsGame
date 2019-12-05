@@ -7,7 +7,7 @@ public class Plot implements Serializable {
     int value;
     public String event; String title;
     int rent[];
-    String district;
+    public String district;
 
     //Creates dummy plot.
     public Plot(int ID) {

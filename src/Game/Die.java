@@ -1,6 +1,8 @@
 package Game;
 
-public class Die {
+import java.io.Serializable;
+
+public class Die implements Serializable {
     int facets;
     public int result;
 
