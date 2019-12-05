@@ -13,7 +13,6 @@ public class Player implements Serializable {
     public int wealth;
     public int value;
     public int boardPosition;
-    public HashMap<String,Label> javaFXlabels = new HashMap<>();
 
     public Player(String name, int ID) {
         this.name = name;

@@ -448,7 +448,7 @@
       <Button fx:id="tradeButton" layoutX="107.0" layoutY="227.0" mnemonicParsing="false" text="Trade" />
       <Button fx:id="propertiesPlots" layoutX="95.0" layoutY="287.0" mnemonicParsing="false" text="Properties" />
       <Button fx:id="rollDice" layoutX="98.0" layoutY="347.0" mnemonicParsing="false" onAction="#rollDiceAction" text="Roll Dice" />
-      <Button fx:id="savegameButton" layoutX="722.0" layoutY="1.0" mnemonicParsing="false" text="Save Game" />
+      <Button fx:id="savegameButton" layoutX="722.0" layoutY="1.0" mnemonicParsing="false" onAction="#SaveGameAction" text="Save Game" />
       <Pane fx:id="playerPane1" layoutX="220.0" layoutY="150.0" prefHeight="120.0" prefWidth="120.0">
          <children>
             <Label fx:id="playerName1" layoutX="11.0" layoutY="14.0" text="Name" textFill="WHITE" />

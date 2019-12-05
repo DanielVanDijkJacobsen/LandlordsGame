@@ -1,6 +1,8 @@
 package Game;
 
-public class ChanceCard {
+import java.io.Serializable;
+
+public class ChanceCard implements Serializable {
     String text;
     int WealthChangePlayer;
     int StealFromOpponents;

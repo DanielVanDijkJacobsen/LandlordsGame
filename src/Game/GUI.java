@@ -1,5 +1,6 @@
 package Game;
 
+import DataHandler.DataManager;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
@@ -11,6 +12,9 @@ import javafx.scene.paint.CycleMethod;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
 import javafx.scene.shape.Rectangle;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GUI {
     public GameMaster theGame;
@@ -24,6 +28,7 @@ public class GUI {
     @FXML private Label playerName4; @FXML private Label playerWealth4; @FXML private Label playerPosition4;
     @FXML private Label playerName5; @FXML private Label playerWealth5; @FXML private Label playerPosition5;
     @FXML private Label playerName6; @FXML private Label playerWealth6; @FXML private Label playerPosition6;
+    ArrayList<HashMap<String,Label>> playerFXLabels = new ArrayList<>();
 
     @FXML private Group plots;
 
@@ -65,6 +70,12 @@ public class GUI {
         theGame.endTurn();
     }
 
+    @FXML
+    private void SaveGameAction (Event event) {
+        DataManager dataManager = new DataManager("saveFiles/test");
+        dataManager.saveGameObjectToFile(this.theGame);
+    }
+
     public void updatePlayerTokens() {
         playerTokens.getChildren().get(theGame.turnOrder).setLayoutY(plots.getChildren().get(theGame.players.
                 get(theGame.turnOrder).boardPosition).getLayoutY()+(10+(8*theGame.turnOrder)));
@@ -83,10 +94,9 @@ public class GUI {
 
     public void updatePlayerStatistics() {
         for (int i = 0; i < theGame.players.size(); i++) {
-            theGame.players.get(i).javaFXlabels.get("Name").setText(theGame.players.get(i).name);
-            theGame.players.get(i).javaFXlabels.get("Wealth").setText(theGame.players.get(i).wealth + ",-");
-            theGame.players.get(i).javaFXlabels.get("Placement").setText("Placement: " +
-                    theGame.players.get(i).boardPosition);
+            playerFXLabels.get(i).get("Name").setText(theGame.players.get(i).name);
+            playerFXLabels.get(i).get("Wealth").setText(theGame.players.get(i).wealth + ",-");
+            playerFXLabels.get(i).get("Placement").setText("Placement: " + theGame.players.get(i).boardPosition);
         }
     }
 
@@ -103,27 +113,30 @@ public class GUI {
     }
 
     public void setupPlayers() {
-        theGame.players.get(0).javaFXlabels.put("Name",playerName1);
-        theGame.players.get(0).javaFXlabels.put("Wealth",playerWealth1);
-        theGame.players.get(0).javaFXlabels.put("Placement",playerPosition1);
-        theGame.players.get(1).javaFXlabels.put("Name",playerName2);
-        theGame.players.get(1).javaFXlabels.put("Wealth",playerWealth2);
-        theGame.players.get(1).javaFXlabels.put("Placement",playerPosition2);
-        theGame.players.get(2).javaFXlabels.put("Name",playerName3);
-        theGame.players.get(2).javaFXlabels.put("Wealth",playerWealth3);
-        theGame.players.get(2).javaFXlabels.put("Placement",playerPosition3);
+        for (int i = 0; i < theGame.players.size(); i++) {
+            playerFXLabels.add(new HashMap<>());
+        }
+        playerFXLabels.get(0).put("Name", playerName1);
+        playerFXLabels.get(0).put("Wealth",playerWealth1);
+        playerFXLabels.get(0).put("Placement",playerPosition1);
+        playerFXLabels.get(1).put("Name",playerName2);
+        playerFXLabels.get(1).put("Wealth",playerWealth2);
+        playerFXLabels.get(1).put("Placement",playerPosition2);
+        playerFXLabels.get(2).put("Name",playerName3);
+        playerFXLabels.get(2).put("Wealth",playerWealth3);
+        playerFXLabels.get(2).put("Placement",playerPosition3);
         if (theGame.players.size() > 3) {
-            theGame.players.get(3).javaFXlabels.put("Name",playerName4);
-            theGame.players.get(3).javaFXlabels.put("Wealth",playerWealth4);
-            theGame.players.get(3).javaFXlabels.put("Placement",playerPosition4);
+            playerFXLabels.get(3).put("Name",playerName4);
+            playerFXLabels.get(3).put("Wealth",playerWealth4);
+            playerFXLabels.get(3).put("Placement",playerPosition4);
             if (theGame.players.size() > 4) {
-                theGame.players.get(4).javaFXlabels.put("Name",playerName5);
-                theGame.players.get(4).javaFXlabels.put("Wealth",playerWealth5);
-                theGame.players.get(4).javaFXlabels.put("Placement",playerPosition5);
+                playerFXLabels.get(4).put("Name",playerName5);
+                playerFXLabels.get(4).put("Wealth",playerWealth5);
+                playerFXLabels.get(4).put("Placement",playerPosition5);
                 if (theGame.players.size() > 5) {
-                    theGame.players.get(5).javaFXlabels.put("Name",playerName6);
-                    theGame.players.get(5).javaFXlabels.put("Wealth",playerWealth6);
-                    theGame.players.get(5).javaFXlabels.put("Placement",playerPosition6);
+                    playerFXLabels.get(5).put("Name",playerName6);
+                    playerFXLabels.get(5).put("Wealth",playerWealth6);
+                    playerFXLabels.get(5).put("Placement",playerPosition6);
                 } else {
                     playerName6.setVisible(false);
                     playerWealth6.setVisible(false);

@@ -1,9 +1,10 @@
 package Game;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ChanceDeck {
+public class ChanceDeck implements Serializable {
     public ArrayList<ChanceCard> theDeck = new ArrayList<>();
     public ArrayList<ChanceCard> discardPile = new ArrayList<>();
 
