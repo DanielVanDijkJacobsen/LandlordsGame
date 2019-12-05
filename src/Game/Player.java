@@ -1,11 +1,6 @@
 package Game;
 
-import Game.Plots.Plot;
-import javafx.scene.control.Label;
-
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Player implements Serializable {
     String name;
