@@ -1,6 +1,7 @@
 package Game;
 
 import DataHandler.DataManager;
+import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
@@ -41,10 +42,14 @@ public class GUI {
         }
         System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         updatePlayerTokens();
-        if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)-1).event != null) {
+        if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
             //Do event stuff.
+
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
+            QueryToBuyPlot query = new QueryToBuyPlot
+                    (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
+                    theGame.players.get(theGame.turnOrder));
         } else {
             //Do payment stuff.
         }

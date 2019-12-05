@@ -3,7 +3,7 @@ package Game;
 import java.io.Serializable;
 
 public class Player implements Serializable {
-    String name;
+    public String name;
     int ID;
     public int wealth;
     public int value;
