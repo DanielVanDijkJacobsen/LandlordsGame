@@ -44,7 +44,6 @@ public class GUI {
         updatePlayerTokens();
         if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
             //Do event stuff.
-
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
             QueryToBuyPlot query = new QueryToBuyPlot

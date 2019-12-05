@@ -10,7 +10,7 @@ import java.util.Optional;
 public class QueryToBuyPlot {
 
     public QueryToBuyPlot(Plot plot, Player player) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(plot.title);
         alert.setHeaderText(player.name + " will you buy " + plot.title + "?");
         alert.setContentText("The price for this property is: " + plot.value + ",-");
