@@ -80,6 +80,8 @@ public class AsgerTemp {
 
 
 
+
+
     /*public QueryToPayRent (Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(plot.title);
