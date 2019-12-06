@@ -13,7 +13,7 @@ public class PayRentInfoNormal {
     public PayRentInfoNormal(GameMaster game) {
         Player playerToPay = game.players.get(game.turnOrder);
         Plot plot = game.board.plotsOnBoard.get(playerToPay.boardPosition);
-        Player playerToReceive = game.players.get(game.board.ownerships.get(plot.ID));
+        Player playerToReceive = game.players.get(game.board.ownerships.get(plot.ID)-1);
         int rent = plot.rent[plot.upgrades];
 
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

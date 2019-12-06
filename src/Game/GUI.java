@@ -98,7 +98,7 @@ public class GUI {
             }
         }
         if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null &&
-                theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event == null) {
+                theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).value > 0) {
             new QueryToBuyPlot
                     (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
                             theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
@@ -131,6 +131,16 @@ public class GUI {
     private void SaveGameAction (Event event) {
         DataManager dataManager = new DataManager("saveFiles/test");
         dataManager.saveGameObjectToFile(this.theGame);
+    }
+
+    @FXML
+    private void tradeMenu (Event event) {
+
+    }
+
+    @FXML
+    private void manageProperties (Event event) {
+
     }
 
     public void updatePlayerTokens() {

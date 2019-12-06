@@ -125,9 +125,9 @@ public class JSONImporter {
                 if (plotJSONObject.size() == 2) {
                     if (plotJSONObject.get("EVENT") == null) {
                         if (plotJSONObject.get("TRAIN") != null) {
-                            plot = new Train(plotID,plotJSONObject.get("TRAIN").toString());
+                            plot = new Train(plotID, plotJSONObject.get("TRAIN").toString());
                         } else if (plotJSONObject.get("UTILITY") != null) {
-                            plot = new Utility(plotID,plotJSONObject.get("UTILITY").toString());
+                            plot = new Utility(plotID, plotJSONObject.get("UTILITY").toString());
                         } else {
                             plot = new Plot(plotID);
                         }
