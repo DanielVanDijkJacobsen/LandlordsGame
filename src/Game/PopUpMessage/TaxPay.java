@@ -7,12 +7,9 @@ import javafx.scene.control.ButtonType;
 
 import java.util.Optional;
 
-public class InfoDump {
-    public InfoDump(ChanceCard chanceCard) {
+public class TaxPay {
 
-    }
-
-    public InfoDump(String event, Player player) {
+    public TaxPay(Player player) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Tax.");
         alert.setHeaderText(player.name + " you must either pay 10% of " + player.value +
