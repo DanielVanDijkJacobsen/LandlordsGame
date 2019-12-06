@@ -80,7 +80,7 @@ public class AsgerTemp {
 
 
 
-    public QueryToPayRent (Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
+    /*public QueryToPayRent (Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(plot.title);
         alert.setHeaderText(player.name + "You have landed on " + plot.title);
@@ -99,7 +99,6 @@ public class AsgerTemp {
         }
 
 
-
     }
-
+*/
 }

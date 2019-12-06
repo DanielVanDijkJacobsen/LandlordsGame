@@ -23,7 +23,7 @@ public class ChanceDeck implements Serializable {
         return cardDrawn;
     }
     
-    private void shuffle() {
+    public void shuffle() {
         Collections.shuffle(theDeck);
     }
 

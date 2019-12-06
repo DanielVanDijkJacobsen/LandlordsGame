@@ -33,7 +33,7 @@ public class ChanceInfo {
                 game.players.get(game.turnOrder).boardPosition = chanceCard.MoveTo;
             }
             //Move to nearest train.
-            
+
         } else {
         }
     }

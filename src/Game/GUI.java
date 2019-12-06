@@ -77,7 +77,9 @@ public class GUI {
         if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
             if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("CHANCE")) {
+                    theGame.chanceDeck.shuffle();
                     new ChanceInfo(theGame.chanceDeck.drawCard(), theGame);
+                    updatePlayerTokens();
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX4000/10%")) {
                     calculatePlayerValue();
