@@ -1,6 +1,7 @@
 package Game;
 
 import DataHandler.DataManager;
+import Game.PopUpMessage.ChanceInfo;
 import Game.PopUpMessage.TaxPay;
 import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
@@ -76,7 +77,7 @@ public class GUI {
         if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
             if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("CHANCE")) {
-
+                    new ChanceInfo(theGame.chanceDeck.drawCard(), theGame);
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX4000/10%")) {
                     calculatePlayerValue();

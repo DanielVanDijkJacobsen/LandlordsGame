@@ -84,7 +84,7 @@ public class AsgerTemp {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(plot.title);
         alert.setHeaderText(player.name + "You have landed on " + plot.title);
-        alert.setContentText("The rent for " + plot.title + "is " + plot.value );
+        alert.setContentText("The rent for " + plot.title + "is " + plot.value);
         Optional<ButtonType> result = alert.showAndWait();
         if(result.get() == ButtonType.OK) {
             player.wealth = player.wealth - plot.rent;

@@ -23,7 +23,7 @@ public class TaxPay {
                 player.wealth = player.wealth - 4000;
             }
         } else if (taxType.contentEquals("TAX2000")) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Tax.");
             alert.setHeaderText(player.name + " you must either pay 2000,- in taxes.");
             alert.setContentText("Press to pay, you have no choice.");
