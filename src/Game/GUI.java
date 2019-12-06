@@ -72,7 +72,19 @@ public class GUI {
 
     private void resolvePlayerPlacement() {
         if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
-            //Do event stuff.
+            if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
+                    event.contentEquals("CHANCE")) {
+
+            } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
+                    event.contentEquals("TAX4000/10%")) {
+
+            } else if ((theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
+                    event.contentEquals("GOTOJAIL"))) {
+
+            } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
+                    event.contentEquals("TAX2000")) {
+
+            }
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
             QueryToBuyPlot query = new QueryToBuyPlot
