@@ -1,6 +1,7 @@
 package Game;
 
 import DataHandler.DataManager;
+import Game.PopUpMessage.InfoDump;
 import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -78,7 +79,8 @@ public class GUI {
 
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX4000/10%")) {
-
+                    calculatePlayerValue();
+                    new InfoDump("TAX4000/10%", theGame.players.get(theGame.turnOrder));
             } else if ((theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("GOTOJAIL"))) {
 
@@ -88,7 +90,7 @@ public class GUI {
             }
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
-            QueryToBuyPlot query = new QueryToBuyPlot
+            new QueryToBuyPlot
                     (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
                             theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
             Node nodeRectangle = plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition);
@@ -102,6 +104,18 @@ public class GUI {
         } else {
             //Do payment stuff.
         }
+    }
+
+    private void calculatePlayerValue() {
+        int value = 0;
+        value = value + theGame.players.get(theGame.turnOrder).wealth;
+        for (int i = 0; i < theGame.board.ownerships.size(); i++) {
+            if (theGame.board.ownerships.get(i) != null &&
+                    theGame.board.ownerships.get(i) == theGame.players.get(theGame.turnOrder).ID) {
+                value = value + theGame.board.plotsOnBoard.get(i).value;
+            }
+        }
+        theGame.players.get(theGame.turnOrder).value = value;
     }
 
     @FXML
