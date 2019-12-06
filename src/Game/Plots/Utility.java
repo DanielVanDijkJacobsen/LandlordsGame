@@ -6,5 +6,6 @@ public class Utility extends Plot {
     public Utility(int ID, String title) {
         super(ID);
         this.title = title;
+        this.value = 3000;
     }
 }

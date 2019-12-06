@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Player implements Serializable {
     public String name;
-    int ID;
+    public int ID;
     public int wealth;
     public int value;
     public int boardPosition;

@@ -40,38 +40,47 @@ public class GUI {
         } else {
             theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
         }
-        System.out.println(theGame.turnOrder + " " + theGame.players.get(theGame.turnOrder).boardPosition);
         updatePlayerTokens();
-        if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
-            //Do event stuff.
-        } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
-            //Do buy property stuff.
-            QueryToBuyPlot query = new QueryToBuyPlot
-                    (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
-                    theGame.players.get(theGame.turnOrder));
-        } else {
-            //Do payment stuff.
-        }
+        resolvePlayerPlacement();
+        updatePlayerStatistics();
         if (theGame.die1.result == theGame.die2.result) {
             theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
             updatePlayerTokens();
+            resolvePlayerPlacement();
+            updatePlayerStatistics();
             //Take an extra turn.
             if (theGame.die1.result == theGame.die2.result) {
                 theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));
                 updatePlayerTokens();
+                resolvePlayerPlacement();
+                updatePlayerStatistics();
                 if (theGame.die1.result == theGame.die2.result) {
                     //Go to jail, you criminal, think of the dice!
                     theGame.players.get(theGame.turnOrder).boardPosition = 0;
                     updatePlayerTokens();
                 } else {
                     //Take another extra turn.
+                    updatePlayerTokens();
+                    resolvePlayerPlacement();
+                    updatePlayerStatistics();
                 }
-
             }
         }
-        updatePlayerStatistics();
         //Check for bankruptcy and game objectives.
         theGame.endTurn();
+    }
+
+    private void resolvePlayerPlacement() {
+        if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
+            //Do event stuff.
+        } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
+            //Do buy property stuff.
+            QueryToBuyPlot query = new QueryToBuyPlot
+                    (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
+                            theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
+        } else {
+            //Do payment stuff.
+        }
     }
 
     @FXML
