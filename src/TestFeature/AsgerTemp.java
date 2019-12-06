@@ -1,5 +1,7 @@
 package TestFeature;
 
+import Game.Player;
+import Game.Plots.Plot;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -7,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
+import java.util.HashMap;
 import java.util.Optional;
 
 public class AsgerTemp {
@@ -74,4 +77,29 @@ public class AsgerTemp {
         } else {
         }
     }
+
+
+
+    public QueryToPayRent (Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(plot.title);
+        alert.setHeaderText(player.name + "You have landed on " + plot.title);
+        alert.setContentText("The rent for " + plot.title + "is " + plot.value );
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get() == ButtonType.OK) {
+            player.wealth = player.wealth - plot.rent;
+        }
+        else if (player.wealth = 0 || player.wealth < plot.rent)
+        {
+            alert.setContentText("You have insufficient funds, you need to pawn something"); //skal tilføjes en måde at tilgå pantsætnings funktion
+        }
+
+
+        else  {
+        }
+
+
+
+    }
+
 }
