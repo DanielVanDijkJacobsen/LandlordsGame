@@ -8,7 +8,10 @@ import javafx.scene.control.ButtonType;
 import java.util.HashMap;
 import java.util.Optional;
 
+import static sun.audio.AudioPlayer.player;
+
 public class QueryToBuyPlot {
+
 
     public QueryToBuyPlot(Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -22,6 +25,10 @@ public class QueryToBuyPlot {
             ownerships.put(plot.ID, player.ID);
         } else {
         }
-    }
+
+
+
+        }
+
 
 }
