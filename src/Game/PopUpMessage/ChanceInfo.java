@@ -58,6 +58,9 @@ public class ChanceInfo {
             }
             //HouseTax and Hotel Tax
             //Jail Break Token
+            if (chanceCard.JailBreakToken) {
+                game.players.get(game.turnOrder).JailBreakTokens++;
+            }
             //Determine legation.
             if (game.players.get(game.turnOrder).wealth < chanceCard.playerValueBelow) {
                 game.players.get(game.turnOrder).wealth =

@@ -8,11 +8,13 @@ public class Player implements Serializable {
     public int wealth;
     public int value;
     public int boardPosition;
+    public int JailBreakTokens;
 
     public Player(String name, int ID) {
         this.name = name;
         this.boardPosition = 1;
         this.wealth = 30000;
         this.ID = ID;
+        this.JailBreakTokens = 0;
     }
 }
