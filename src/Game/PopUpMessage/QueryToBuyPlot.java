@@ -22,6 +22,6 @@ public class QueryToBuyPlot {
             ownerships.put(plot.ID, player.ID);
         } else {
         }
-
     }
+
 }
