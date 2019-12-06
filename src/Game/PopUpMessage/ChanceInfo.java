@@ -41,6 +41,7 @@ public class ChanceInfo {
             }
             //Move to nearest train.
             if (chanceCard.trainMove) {
+                boolean trainFound = false;
                 for (int i = game.players.get(game.turnOrder).boardPosition+1; i < game.board.plotsOnBoard.size(); i++) {
                     if (game.board.plotsOnBoard.get(i) instanceof Train) {
                         game.players.get(game.turnOrder).boardPosition = game.board.plotsOnBoard.get(i).ID;
@@ -48,7 +49,22 @@ public class ChanceInfo {
                         if (chanceCard.doublePay) {
                             //INSERT CODE FOR PAYMENT, BOOLEAN TYPE?
                         }
+                        trainFound = true;
+                        break;
                     }
+                }
+                if (!trainFound) {
+                    for (int i = 0; i < game.board.plotsOnBoard.size(); i++) {
+                        if (game.board.plotsOnBoard.get(i) instanceof Train) {
+                            game.players.get(game.turnOrder).boardPosition = game.board.plotsOnBoard.get(i).ID;
+                            //Code for double pay
+                            if (chanceCard.doublePay) {
+                                //INSERT CODE FOR PAYMENT, BOOLEAN TYPE?
+                            }
+                            break;
+                        }
+                    }
+
                 }
                 //Determine if start have been passed.
                 if (game.players.get(game.turnOrder).boardPosition < lastPlacement
@@ -58,8 +74,8 @@ public class ChanceInfo {
             }
             //HouseTax and Hotel Tax
             //Jail Break Token
-            if (chanceCard.JailBreakToken) {
-                game.players.get(game.turnOrder).JailBreakTokens++;
+            if (chanceCard.jailBreakToken) {
+                game.players.get(game.turnOrder).jailBreakTokens++;
             }
             //Determine legation.
             if (game.players.get(game.turnOrder).wealth < chanceCard.playerValueBelow) {

@@ -12,7 +12,7 @@ public class ChanceCard implements Serializable {
     public boolean doublePay;
     public int houseTax;
     public int hotelTax;
-    public boolean JailBreakToken;
+    public boolean jailBreakToken;
     public int playerValueBelow;
     public int conditionMetWealthChange;
 
@@ -28,7 +28,7 @@ public class ChanceCard implements Serializable {
         this.doublePay = doublePay;
         this.houseTax = houseTax;
         this.hotelTax = hotelTax;
-        this.JailBreakToken = jailBreakToken;
+        this.jailBreakToken = jailBreakToken;
         this.playerValueBelow = playerValueBelow;
         this.conditionMetWealthChange = conditionMetWealthChange;
     }

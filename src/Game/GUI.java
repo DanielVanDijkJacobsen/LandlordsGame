@@ -75,6 +75,7 @@ public class GUI {
 
     private void resolvePlayerPlacement() {
         if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event != null) {
+            int placement = theGame.players.get(theGame.turnOrder).boardPosition;
             if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("CHANCE")) {
                     theGame.chanceDeck.shuffle();
@@ -90,6 +91,9 @@ public class GUI {
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX2000")) {
                     new TaxPay(theGame.players.get(theGame.turnOrder), "TAX2000");
+            }
+            if (theGame.players.get(theGame.turnOrder).boardPosition != placement) {
+                resolvePlayerPlacement();
             }
         }
         if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
