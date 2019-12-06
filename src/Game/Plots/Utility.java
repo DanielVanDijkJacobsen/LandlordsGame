@@ -7,5 +7,6 @@ public class Utility extends Plot {
         super(ID);
         this.title = title;
         this.value = 3000;
+        this.district = "SILVER";
     }
 }

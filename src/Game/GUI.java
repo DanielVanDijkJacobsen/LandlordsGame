@@ -30,6 +30,7 @@ public class GUI {
     @FXML private Label playerName5; @FXML private Label playerWealth5; @FXML private Label playerPosition5;
     @FXML private Label playerName6; @FXML private Label playerWealth6; @FXML private Label playerPosition6;
     ArrayList<HashMap<String,Label>> playerFXLabels = new ArrayList<>();
+    Color[] playerColors = {Color.RED, Color.BLUE, Color.YELLOW, Color.PURPLE, Color.GREEN, Color.ORANGE};
 
     @FXML private Group plots;
 
@@ -90,6 +91,14 @@ public class GUI {
             QueryToBuyPlot query = new QueryToBuyPlot
                     (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
                             theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
+            Node nodeRectangle = plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition);
+            if (nodeRectangle instanceof Rectangle) {
+                Stop[] stops = new Stop[] {new Stop(0, Color.valueOf
+                        (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).district)),
+                        new Stop(1, playerColors[theGame.turnOrder])};
+                LinearGradient linearGradient = new LinearGradient(0,0,1,1,true, CycleMethod.NO_CYCLE, stops);
+                ((Rectangle) nodeRectangle).setFill(linearGradient);
+            }
         } else {
             //Do payment stuff.
         }
@@ -129,8 +138,8 @@ public class GUI {
         for (int i =0; i < plots.getChildren().size(); i++) {
             Node nodeRectangle = plots.getChildren().get(i);
             if (nodeRectangle instanceof Rectangle && theGame.board.plotsOnBoard.get(i).district != null) {
-                Stop[] stops = new Stop[] {new Stop(0, Color.BLACK),
-                        new Stop(1, Color.valueOf(theGame.board.plotsOnBoard.get(i).district))};
+                Stop[] stops = new Stop[] {new Stop(0, Color.valueOf(theGame.board.plotsOnBoard.get(i).district)),
+                        new Stop(1, Color.BLACK)};
                 LinearGradient linearGradient = new LinearGradient(0,0,1,1,true, CycleMethod.NO_CYCLE, stops);
                 ((Rectangle) nodeRectangle).setFill(linearGradient);
             }
