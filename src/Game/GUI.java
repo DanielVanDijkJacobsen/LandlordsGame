@@ -2,6 +2,7 @@ package Game;
 
 import DataHandler.DataManager;
 import Game.PopUpMessage.ChanceInfo;
+import Game.PopUpMessage.PayRentInfoNormal;
 import Game.PopUpMessage.TaxPay;
 import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
@@ -96,8 +97,8 @@ public class GUI {
                 resolvePlayerPlacement();
             }
         }
-        if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
-            //Do buy property stuff.
+        if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null &&
+                theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event == null) {
             new QueryToBuyPlot
                     (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
                             theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
@@ -109,8 +110,8 @@ public class GUI {
                 LinearGradient linearGradient = new LinearGradient(0,0,1,1,true, CycleMethod.NO_CYCLE, stops);
                 ((Rectangle) nodeRectangle).setFill(linearGradient);
             }
-        } else {
-            //Do payment stuff.
+        } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event == null) {
+            new PayRentInfoNormal(theGame);
         }
     }
 

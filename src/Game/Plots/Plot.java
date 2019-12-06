@@ -6,8 +6,8 @@ public class Plot implements Serializable {
     public int ID;
     public int value;
     public String event; public String title;
-    int[] rent;
-    int upgrades = 0;
+    public int[] rent;
+    public int upgrades = 0;
     public String district;
 
     //Creates dummy plot.
