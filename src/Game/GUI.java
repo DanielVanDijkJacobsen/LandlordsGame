@@ -1,7 +1,7 @@
 package Game;
 
 import DataHandler.DataManager;
-import Game.PopUpMessage.InfoDump;
+import Game.PopUpMessage.TaxPay;
 import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -80,13 +80,13 @@ public class GUI {
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX4000/10%")) {
                     calculatePlayerValue();
-                    new InfoDump("TAX4000/10%", theGame.players.get(theGame.turnOrder));
+                    new TaxPay(theGame.players.get(theGame.turnOrder), "TAX4000/10%");
             } else if ((theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("GOTOJAIL"))) {
-
+                    theGame.players.get(theGame.turnOrder).boardPosition = 0;
             } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).
                     event.contentEquals("TAX2000")) {
-
+                    new TaxPay(theGame.players.get(theGame.turnOrder), "TAX2000");
             }
         } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
