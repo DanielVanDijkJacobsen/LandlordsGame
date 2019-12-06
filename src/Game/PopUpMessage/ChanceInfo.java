@@ -2,6 +2,7 @@ package Game.PopUpMessage;
 
 import Game.ChanceCard;
 import Game.GameMaster;
+import Game.Plots.Train;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
@@ -17,6 +18,7 @@ public class ChanceInfo {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get() == ButtonType.OK) {
             //Adjust riches.
+            int lastPlacement = game.players.get(game.turnOrder).boardPosition;
             game.players.get(game.turnOrder).wealth =
                     game.players.get(game.turnOrder).wealth + chanceCard.WealthChangePlayer;
             //Receive money from opponents.
@@ -31,9 +33,36 @@ public class ChanceInfo {
             //Move to.
             if (chanceCard.MoveTo != -1) {
                 game.players.get(game.turnOrder).boardPosition = chanceCard.MoveTo;
+                //Determine if start have been passed.
+                if (game.players.get(game.turnOrder).boardPosition < lastPlacement
+                        && game.players.get(game.turnOrder).boardPosition != 0) {
+                    game.players.get(game.turnOrder).wealth = game.players.get(game.turnOrder).wealth;
+                }
             }
             //Move to nearest train.
-
+            if (chanceCard.trainMove) {
+                for (int i = game.players.get(game.turnOrder).boardPosition+1; i < game.board.plotsOnBoard.size(); i++) {
+                    if (game.board.plotsOnBoard.get(i) instanceof Train) {
+                        game.players.get(game.turnOrder).boardPosition = game.board.plotsOnBoard.get(i).ID;
+                        //Code for double pay
+                        if (chanceCard.doublePay) {
+                            //INSERT CODE FOR PAYMENT, BOOLEAN TYPE?
+                        }
+                    }
+                }
+                //Determine if start have been passed.
+                if (game.players.get(game.turnOrder).boardPosition < lastPlacement
+                        && game.players.get(game.turnOrder).boardPosition != 0) {
+                    game.players.get(game.turnOrder).wealth = game.players.get(game.turnOrder).wealth;
+                }
+            }
+            //HouseTax and Hotel Tax
+            //Jail Break Token
+            //Determine legation.
+            if (game.players.get(game.turnOrder).wealth < chanceCard.playerValueBelow) {
+                game.players.get(game.turnOrder).wealth =
+                        game.players.get(game.turnOrder).wealth + chanceCard.conditionMetWealthChange;
+            }
         } else {
         }
     }

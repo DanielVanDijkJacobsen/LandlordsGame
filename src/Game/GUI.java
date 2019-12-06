@@ -91,7 +91,8 @@ public class GUI {
                     event.contentEquals("TAX2000")) {
                     new TaxPay(theGame.players.get(theGame.turnOrder), "TAX2000");
             }
-        } else if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
+        }
+        if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null) {
             //Do buy property stuff.
             new QueryToBuyPlot
                     (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
