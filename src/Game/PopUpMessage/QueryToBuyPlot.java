@@ -1,5 +1,6 @@
 package Game.PopUpMessage;
 
+import Game.GameMaster;
 import Game.Player;
 import Game.Plots.Plot;
 import javafx.scene.control.Alert;
@@ -8,12 +9,16 @@ import javafx.scene.control.ButtonType;
 import java.util.HashMap;
 import java.util.Optional;
 
-import static sun.audio.AudioPlayer.player;
 
 public class QueryToBuyPlot {
 
 
-    public QueryToBuyPlot(Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
+    public QueryToBuyPlot(GameMaster gameMaster) {
+        //Plot plot, Player player, HashMap<Integer, Integer> ownerships
+        Player player = gameMaster.players.get(gameMaster.turnOrder);
+        Plot plot = gameMaster.board.plotsOnBoard.get(player.boardPosition);
+        HashMap<Integer,Integer> ownerships = gameMaster.board.ownerships;
+
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle(plot.title);
         alert.setHeaderText(player.name + " will you buy " + plot.title + "?");
@@ -25,10 +30,5 @@ public class QueryToBuyPlot {
             ownerships.put(plot.ID, player.ID);
         } else {
         }
-
-
-
-        }
-
-
+    }
 }

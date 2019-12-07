@@ -71,20 +71,20 @@ public class GameCreator {
             JSONImporter jsonImporter = new JSONImporter();
             theGame.board = jsonImporter.createBoardJSON((String) boardOfChoice.getValue());
             theGame.chanceDeck = jsonImporter.createChanceDeckJson((String) boardOfChoice.getValue());
-            Player player1 = new Player(namePlayer1.getCharacters().toString(), 1);
+            Player player1 = new Player(namePlayer1.getCharacters().toString(), 0);
             theGame.players.add(player1);
-            Player player2 = new Player(namePlayer2.getCharacters().toString(), 2);
+            Player player2 = new Player(namePlayer2.getCharacters().toString(), 1);
             theGame.players.add(player2);
-            Player player3 = new Player(namePlayer3.getCharacters().toString(), 3);
+            Player player3 = new Player(namePlayer3.getCharacters().toString(), 2);
             theGame.players.add(player3);
             if (Integer.parseInt((String) numberOfPlayers.getValue()) > 3) {
-                Player player4 = new Player(namePlayer4.getCharacters().toString(), 4);
+                Player player4 = new Player(namePlayer4.getCharacters().toString(), 3);
                 theGame.players.add(player4);
                 if (Integer.parseInt((String) numberOfPlayers.getValue()) > 4) {
-                    Player player5 = new Player(namePlayer5.getCharacters().toString(), 5);
+                    Player player5 = new Player(namePlayer5.getCharacters().toString(), 4);
                     theGame.players.add(player5);
                     if (Integer.parseInt((String) numberOfPlayers.getValue()) > 5) {
-                        Player player6 = new Player(namePlayer6.getCharacters().toString(), 6);
+                        Player player6 = new Player(namePlayer6.getCharacters().toString(), 5);
                         theGame.players.add(player6);
                     }
                 }

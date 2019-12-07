@@ -1,22 +1,29 @@
 package Game;
 
 import DataHandler.DataManager;
+import Game.Management.ManagementController;
+import Game.Plots.Plot;
 import Game.PopUpMessage.ChanceInfo;
 import Game.PopUpMessage.PayRentInfoNormal;
 import Game.PopUpMessage.TaxPay;
 import Game.PopUpMessage.QueryToBuyPlot;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.CycleMethod;
 import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Stop;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -99,16 +106,11 @@ public class GUI {
         }
         if (theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition) == null &&
                 theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).value > 0) {
-            new QueryToBuyPlot
-                    (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition),
-                            theGame.players.get(theGame.turnOrder),theGame.board.ownerships);
-            Node nodeRectangle = plots.getChildren().get(theGame.players.get(theGame.turnOrder).boardPosition);
-            if (nodeRectangle instanceof Rectangle) {
-                Stop[] stops = new Stop[] {new Stop(0, Color.valueOf
-                        (theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition).district)),
-                        new Stop(1, playerColors[theGame.turnOrder])};
-                LinearGradient linearGradient = new LinearGradient(0,0,1,1,true, CycleMethod.NO_CYCLE, stops);
-                ((Rectangle) nodeRectangle).setFill(linearGradient);
+            new QueryToBuyPlot (theGame);
+            if (theGame.players.get(theGame.turnOrder).ID ==
+                    theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition)) {
+                changeOwnerShipGraphics(theGame.players.get(theGame.turnOrder),
+                        theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition));
             }
         } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event == null) {
             new PayRentInfoNormal(theGame);
@@ -140,7 +142,32 @@ public class GUI {
 
     @FXML
     private void manageProperties (Event event) {
+        try {
+            Stage managementStage = new Stage();
+            FXMLLoader loader = new FXMLLoader();
+            Pane root = (Pane)loader.load(getClass().getResource("/Game/Management/Management.fxml").openStream());
+            ManagementController managementController = (ManagementController) loader.getController();
+            Scene scene = new Scene(root);
+            managementController.game = this.theGame;
+            managementController.fillTable();
+            managementStage.setScene(scene);
+            managementStage.setTitle("Property Management");
+            managementStage.setResizable(false);
+            managementStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void changeOwnerShipGraphics(Player player, Plot plot) {
+        Node nodeRectangle = plots.getChildren().get(plot.ID);
+        if (nodeRectangle instanceof Rectangle) {
+            Stop[] stops = new Stop[]{new Stop(0, Color.valueOf
+                    (plot.district)),
+                    new Stop(1, playerColors[player.ID])};
+            LinearGradient linearGradient = new LinearGradient(0, 0, 1, 1, true, CycleMethod.NO_CYCLE, stops);
+            ((Rectangle) nodeRectangle).setFill(linearGradient);
+        }
     }
 
     public void updatePlayerTokens() {
