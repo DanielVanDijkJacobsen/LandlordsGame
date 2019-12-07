@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.util.HashMap;
@@ -15,8 +16,43 @@ import java.util.Optional;
 public class AsgerTemp {
 
 
-    Stage window;
-    Scene scene1, scene2;
+
+    public void jailFunctions(Stage primaryStage) throws Exception{
+    Label label;
+    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Get out of jail options");
+        alert.setHeaderText("Choose options for how to get out of jail");
+        alert.setContentText("I hope we don't see you in here again!");
+
+    ButtonType jailRollDice = new ButtonType("Roll dice");
+    ButtonType getOutToken = new ButtonType("Use token");
+    ButtonType payOption = new ButtonType("Pay 1000");
+
+        alert.getButtonTypes().clear();
+
+        alert.getButtonTypes().addAll(jailRollDice,getOutToken,payOption);
+
+    Optional<ButtonType> result = alert.showAndWait();
+        if(payOption.getText()=="pay 1000") {
+        //make the user pay 1000 from player.wealth
+    } else if(jailRollDice.getText()=="Roll dice") {
+        //give the user ability to roll dice, if he doesn't hit 2 of the same withing 3 rolls, stay in jail, if not go out with the amount you have rolled for
+    } else if (getOutToken.getText()=="Use token") {
+
+        // user picks okay
+    } else {
+        // user picks cancel
+    }
+
+
+
+
+/*
+
+
+
+
+
 
     //@Override
     public void confirmationDialog(Stage primaryStage) throws Exception {
@@ -76,31 +112,7 @@ public class AsgerTemp {
         if (result.get() == ButtonType.OK) {
         } else {
         }
+        */
     }
 
-
-
-
-
-    /*public QueryToPayRent (Plot plot, Player player, HashMap<Integer, Integer> ownerships) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(plot.title);
-        alert.setHeaderText(player.name + "You have landed on " + plot.title);
-        alert.setContentText("The rent for " + plot.title + "is " + plot.value);
-        Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK) {
-            player.wealth = player.wealth - plot.rent;
-        }
-        else if (player.wealth = 0 || player.wealth < plot.rent)
-        {
-            alert.setContentText("You have insufficient funds, you need to pawn something"); //skal tilføjes en måde at tilgå pantsætnings funktion
-        }
-
-
-        else  {
-        }
-
-
-    }
-*/
 }
