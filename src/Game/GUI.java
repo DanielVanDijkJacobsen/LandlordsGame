@@ -47,6 +47,7 @@ public class GUI {
     @FXML
     private void rollDiceAction(Event event) {
         if (theGame.players.get(theGame.turnOrder).boardPosition == 0) {
+
             //Make jail actions. Break and Return functions to break method.
         } else {
             theGame.throwDiceToMove(theGame.players.get(theGame.turnOrder));

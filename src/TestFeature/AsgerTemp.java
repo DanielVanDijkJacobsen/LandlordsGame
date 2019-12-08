@@ -1,10 +1,8 @@
 package TestFeature;
 
+import Game.GameMaster;
 import Game.Player;
 import Game.Plots.Plot;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
@@ -15,7 +13,7 @@ import java.util.Optional;
 
 public class AsgerTemp {
 
-
+    public GameMaster theGame;
 
     public void jailFunctions(Stage primaryStage) throws Exception{
     Label label;
@@ -23,6 +21,10 @@ public class AsgerTemp {
         alert.setTitle("Get out of jail options");
         alert.setHeaderText("Choose options for how to get out of jail");
         alert.setContentText("I hope we don't see you in here again!");
+
+        Player player = theGame.players.get(theGame.turnOrder);
+        Plot plot = theGame.board.plotsOnBoard.get(player.boardPosition);
+        HashMap<Integer,Integer> ownerships = theGame.board.ownerships;
 
     ButtonType jailRollDice = new ButtonType("Roll dice");
     ButtonType getOutToken = new ButtonType("Use token");
@@ -34,8 +36,20 @@ public class AsgerTemp {
 
     Optional<ButtonType> result = alert.showAndWait();
         if(payOption.getText()=="pay 1000") {
+            player.wealth=player.wealth-1000;
+           // rollDiceAction(); // call the function to throw dice
         //make the user pay 1000 from player.wealth
     } else if(jailRollDice.getText()=="Roll dice") {
+            theGame.die1.roll(); theGame.die2.roll();
+            theGame.die1.roll(); theGame.die2.roll();
+            theGame.die1.roll(); theGame.die2.roll();
+            if(theGame.die1.result()== theGame.die2.result()) {
+                theGame.players.get(theGame.turnOrder).boardPosition = 11;
+                updatePlayerTokens();
+            }
+            else  {
+                theGame.endTurn();
+            }
         //give the user ability to roll dice, if he doesn't hit 2 of the same withing 3 rolls, stay in jail, if not go out with the amount you have rolled for
     } else if (getOutToken.getText()=="Use token") {
 
