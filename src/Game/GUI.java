@@ -152,7 +152,7 @@ public class GUI {
             managementController.fillTable();
             managementStage.setScene(scene);
             managementStage.setTitle("Property Management");
-            managementStage.setResizable(false);
+            managementStage.setResizable(true);
             managementStage.show();
         } catch (IOException e) {
             e.printStackTrace();
