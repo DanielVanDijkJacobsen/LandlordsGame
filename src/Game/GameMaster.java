@@ -17,8 +17,8 @@ public class GameMaster implements Serializable {
     public boolean randomizeTurnOrder;
     public int turnOrder;
     public ChanceDeck chanceDeck;
-    Die die1;
-    Die die2;
+    public Die die1;
+    public Die die2;
 
     public GameMaster(int roundsLeft, String boardType, boolean auctionIfNotBought,
                       boolean fastStart, boolean endOnBankruptcy, boolean endOnOverwhelmingWealth,
