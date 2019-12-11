@@ -48,15 +48,6 @@ public class GameMaster implements Serializable {
         }
     }
 
-    public void assignOwnershipOfPlot(int plotID, int playerID) {
-        this.board.ownerships.remove(plotID);
-        this.board.ownerships.put(plotID,playerID);
-    }
-
-    public int determineOwnershipOfPlot(int plotID) {
-        return this.board.ownerships.get(plotID);
-    }
-
     public void throwDiceToMove(Player playerToMove) {
         this.die1.roll(); this.die2.roll();
         playerToMove.boardPosition = playerToMove.boardPosition + this.die1.result + this.die2.result;

@@ -7,11 +7,13 @@ import Game.PopUpMessage.ChanceInfo;
 import Game.PopUpMessage.PayRentInfoNormal;
 import Game.PopUpMessage.TaxPay;
 import Game.PopUpMessage.QueryToBuyPlot;
+import javafx.collections.FXCollections;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -24,8 +26,10 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class GUI {
     public GameMaster theGame;
@@ -110,7 +114,7 @@ public class GUI {
             new QueryToBuyPlot (theGame);
             if (theGame.players.get(theGame.turnOrder).ID ==
                     theGame.board.ownerships.get(theGame.players.get(theGame.turnOrder).boardPosition)) {
-                changeOwnerShipGraphics(theGame.players.get(theGame.turnOrder),
+                changeOwnershipGraphics(
                         theGame.board.plotsOnBoard.get(theGame.players.get(theGame.turnOrder).boardPosition));
             }
         } else if (theGame.board.plotsOnBoard.get((theGame.players.get(theGame.turnOrder).boardPosition)).event == null) {
@@ -160,12 +164,12 @@ public class GUI {
         }
     }
 
-    public void changeOwnerShipGraphics(Player player, Plot plot) {
+    public void changeOwnershipGraphics(Plot plot) {
         Node nodeRectangle = plots.getChildren().get(plot.ID);
         if (nodeRectangle instanceof Rectangle) {
             Stop[] stops = new Stop[]{new Stop(0, Color.valueOf
                     (plot.district)),
-                    new Stop(1, playerColors[player.ID])};
+                    new Stop(1, playerColors[theGame.turnOrder])};
             LinearGradient linearGradient = new LinearGradient(0, 0, 1, 1, true, CycleMethod.NO_CYCLE, stops);
             ((Rectangle) nodeRectangle).setFill(linearGradient);
         }
