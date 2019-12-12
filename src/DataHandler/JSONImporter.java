@@ -130,6 +130,7 @@ public class JSONImporter {
                             plot = new Utility(plotID, plotJSONObject.get("UTILITY").toString());
                         } else {
                             plot = new Plot(plotID);
+                            System.out.println("Error in file parsing.");
                         }
                     } else {
                         plot = new Plot(plotID,plotJSONObject.get("EVENT").toString());
@@ -146,6 +147,7 @@ public class JSONImporter {
                             plotJSONObject.get("DISTRICT").toString());
                 } else {
                     plot = new Plot(plotID);
+                    System.out.println("Error in file parsing.");
                 }
                 plotsForBoard.add(plot);
             }
